@@ -124,21 +124,21 @@
                     <li class="al_index_pageList_item al_index_page_seperator">
                         <div class="al_index_post_title_cnt dis_flex">
                             <div class="al_pos_ab al_letter al_index_post_title_letter">
-                                不
+                                异
                             </div>
                             <h2 class="al_index_post_title">
-                                <a href="/2019/01/05/1.promise/">
-                                    不会吧！不会吧！还不知道Promise！！
+                                <a href="/2019/02/20/4.async/">
+                                    异步操作还让你头疼？试试它async await
                                 </a>
                             </h2>
                             <div class="al_index_post_extra dis_flex">
                                 <div class="al_index_post_date al_index_post_extra_item">
-                                    2019-01-05 00:00:00
+                                    2019-02-20 00:00:00
                                 </div>
 
                                 
                                     <div class="al_index_post_read_time">
-                                        3 Min Read
+                                        2 Min Read
                                     </div>
                                 
 
@@ -146,35 +146,97 @@
                         </div>
                         <div class="al_index_post_excerpt_cnt">
                             <p class="al_index_post_excerpt">
-                                Promise是JS异步编程中的重要概念，异步抽象处理对象，是目前比较流行Javascript异步编程解决方案之一
+                                async => Generator 函数的语法糖
+使得异步操作变得更加方便
 
-Promise的使用
+async函数就是将 Generator 函数的星号（*）替换成async，将yield替换成await
 
-Promise是一个构造函数
-new Promise返回一个promise对象，接收一个函数作为参数，
-callback(resolve, reject)
+ 1. async自带执行器，genertor函数必须靠执行器（co模块）
+ 2. 更好的语义化，async和await，比起星号和yield，语义更清楚了。async表示函数里有异步操作，await表示紧跟在后面的表达式需要等待结果
+ 3. 返回值是 Promise
+ 4. 更广的适用性
+    yield命令后面只能是 Thunk 函数或 Promise 对象
+    yield命令后面只能是 Thunk
+                            </p>
+                        </div>
+                        <div class="al_index_post_button_cnt dis_flex">
+                            <a class="al_button al_button_theme al_index_post_button" href="2019/02/20/4.async/">
+                                READ ON
+                            </a>
+                            <a class="al_button al_button_transparent al_index_post_button" target="_blank" rel="noopener" href="//getpocket.com/edit?url=http://example.com/">
+                                READ LATER
+                            </a>
+                        </div>
+                    </li>
+                
+                    <li class="al_index_pageList_item al_index_page_seperator">
+                        <div class="al_index_post_title_cnt dis_flex">
+                            <div class="al_pos_ab al_letter al_index_post_title_letter">
+                                R
+                            </div>
+                            <h2 class="al_index_post_title">
+                                <a href="/2019/02/05/3.Reflect/">
+                                    Reflect？
+                                </a>
+                            </h2>
+                            <div class="al_index_post_extra dis_flex">
+                                <div class="al_index_post_date al_index_post_extra_item">
+                                    2019-02-05 00:00:00
+                                </div>
+
+                                
+                                    <div class="al_index_post_read_time">
+                                        7 Min Read
+                                    </div>
+                                
+
+                            </div>
+                        </div>
+                        <div class="al_index_post_excerpt_cnt">
+                            <p class="al_index_post_excerpt">
+                                Reflect
+
+为了操作对象而提供的新的API
+设计的目的
+1. 将Object对象的一些方法放到了Relect对象上，现阶段某些方法同时在object与Reflect上，未来新方法值只部署在Reflect对象上
 
 1
 2
 3
 4
 5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
 
 
-const promise = new Promise((resolve, reject) => {
-    // 此时的代码依然是同步
-    // 异步处理
-    // 处理后的结果，=> resolve 或者 reject
-});
+// 老写法
+try {
+  Object.defineProperty(target, property, attributes);
+  // success
+} catch (e) {
+  // failure
+}
 
-
-Promise的状态
-三种状态
-
+// 新写法
+if (Reflect.defin
                             </p>
                         </div>
                         <div class="al_index_post_button_cnt dis_flex">
-                            <a class="al_button al_button_theme al_index_post_button" href="2019/01/05/1.promise/">
+                            <a class="al_button al_button_theme al_index_post_button" href="2019/02/05/3.Reflect/">
                                 READ ON
                             </a>
                             <a class="al_button al_button_transparent al_index_post_button" target="_blank" rel="noopener" href="//getpocket.com/edit?url=http://example.com/">
@@ -187,11 +249,6 @@ Promise的状态
 
             <nav class="dis_flex al_post_nav">
                 <a class="al_post_nav_item dis_flex_acenter" href="/">
-                    
-                        <svg class="al_arrow">
-                            <use xmlns="http://www.w3.org/2000/svg" xlink:href="/assets/svg_icons.svg#svg-arrow-left"></use>
-                        </svg>
-                        <span>Newer Posts</span>
                     
                 </a>
                 <a class="al_post_nav_item dis_flex_acenter" href="/">

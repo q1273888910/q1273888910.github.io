@@ -124,21 +124,21 @@
                     <li class="al_index_pageList_item al_index_page_seperator">
                         <div class="al_index_post_title_cnt dis_flex">
                             <div class="al_pos_ab al_letter al_index_post_title_letter">
-                                不
+                                E
                             </div>
                             <h2 class="al_index_post_title">
-                                <a href="/2019/01/05/1.promise/">
-                                    不会吧！不会吧！还不知道Promise！！
+                                <a href="/2019/03/18/6.class/">
+                                    ES6新class写法可以让对象原型和写法更加清晰
                                 </a>
                             </h2>
                             <div class="al_index_post_extra dis_flex">
                                 <div class="al_index_post_date al_index_post_extra_item">
-                                    2019-01-05 00:00:00
+                                    2019-03-18 00:00:00
                                 </div>
 
                                 
                                     <div class="al_index_post_read_time">
-                                        3 Min Read
+                                        4 Min Read
                                     </div>
                                 
 
@@ -146,35 +146,121 @@
                         </div>
                         <div class="al_index_post_excerpt_cnt">
                             <p class="al_index_post_excerpt">
-                                Promise是JS异步编程中的重要概念，异步抽象处理对象，是目前比较流行Javascript异步编程解决方案之一
+                                ES6提供了更接近传统语言的写法，引入calss类的概念，作为对象的模板
+通过class关键字，可以定义类
 
-Promise的使用
+新的class写法可以让对象原型和写法更加清晰，更像面向对象编程的语法
 
-Promise是一个构造函数
-new Promise返回一个promise对象，接收一个函数作为参数，
-callback(resolve, reject)
+类必须使用new调用，否则会报错。这是它跟普通构造函数的一个主要区别，后者不用new也可以执行
+
+类不存在变量提升
+
+定义一个类
 
 1
 2
 3
 4
 5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
 
 
-const promise = new Promise((resolve, reject) => {
-    // 此时的代码依然是同步
-    // 异步处理
-    // 处理后的结果，=> resolve 或者 reject
-});
+class Point {
+    // 这里就是我们的构造函数
+    constructor() {
 
-
-Promise的状态
-三种状态
-
+  
                             </p>
                         </div>
                         <div class="al_index_post_button_cnt dis_flex">
-                            <a class="al_button al_button_theme al_index_post_button" href="2019/01/05/1.promise/">
+                            <a class="al_button al_button_theme al_index_post_button" href="2019/03/18/6.class/">
+                                READ ON
+                            </a>
+                            <a class="al_button al_button_transparent al_index_post_button" target="_blank" rel="noopener" href="//getpocket.com/edit?url=http://example.com/">
+                                READ LATER
+                            </a>
+                        </div>
+                    </li>
+                
+                    <li class="al_index_pageList_item al_index_page_seperator">
+                        <div class="al_index_post_title_cnt dis_flex">
+                            <div class="al_pos_ab al_letter al_index_post_title_letter">
+                                G
+                            </div>
+                            <h2 class="al_index_post_title">
+                                <a href="/2019/03/03/5.generator/">
+                                    Generator - 异步编程解决方法之一
+                                </a>
+                            </h2>
+                            <div class="al_index_post_extra dis_flex">
+                                <div class="al_index_post_date al_index_post_extra_item">
+                                    2019-03-03 00:00:00
+                                </div>
+
+                                
+                                    <div class="al_index_post_read_time">
+                                        7 Min Read
+                                    </div>
+                                
+
+                            </div>
+                        </div>
+                        <div class="al_index_post_excerpt_cnt">
+                            <p class="al_index_post_excerpt">
+                                Generator - 异步编程解决方法之一
+
+Generator函数是一个状态机，封装了多个内部状态
+
+执行Generator函数会返回一个遍历器对象，也就是说，Generator函数除了状态机，还是一个遍历对象生成函数，返回遍历器对象，可以依次遍历Generator函数内部的每一个状态
+
+特点
+
+ 1. function关键字与函数名之间一个星号
+    
+    
+ 2. 函数体内部使用yield（产出）表达式，定义不同的内部状态
+    
+    1
+    2
+    3
+    4
+    5
+    6
+    7
+    8
+    9
+    10
+    11
+    12
+                            </p>
+                        </div>
+                        <div class="al_index_post_button_cnt dis_flex">
+                            <a class="al_button al_button_theme al_index_post_button" href="2019/03/03/5.generator/">
                                 READ ON
                             </a>
                             <a class="al_button al_button_transparent al_index_post_button" target="_blank" rel="noopener" href="//getpocket.com/edit?url=http://example.com/">
@@ -187,11 +273,6 @@ Promise的状态
 
             <nav class="dis_flex al_post_nav">
                 <a class="al_post_nav_item dis_flex_acenter" href="/">
-                    
-                        <svg class="al_arrow">
-                            <use xmlns="http://www.w3.org/2000/svg" xlink:href="/assets/svg_icons.svg#svg-arrow-left"></use>
-                        </svg>
-                        <span>Newer Posts</span>
                     
                 </a>
                 <a class="al_post_nav_item dis_flex_acenter" href="/">

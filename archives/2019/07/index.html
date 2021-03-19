@@ -124,16 +124,16 @@
                     <li class="al_index_pageList_item al_index_page_seperator">
                         <div class="al_index_post_title_cnt dis_flex">
                             <div class="al_pos_ab al_letter al_index_post_title_letter">
-                                不
+                                一
                             </div>
                             <h2 class="al_index_post_title">
-                                <a href="/2019/01/05/1.promise/">
-                                    不会吧！不会吧！还不知道Promise！！
+                                <a href="/2019/07/18/11.%E8%A7%A3%E6%9E%84%E8%B5%8B%E5%80%BC/">
+                                    一分钟了解解构赋值
                                 </a>
                             </h2>
                             <div class="al_index_post_extra dis_flex">
                                 <div class="al_index_post_date al_index_post_extra_item">
-                                    2019-01-05 00:00:00
+                                    2019-07-18 00:00:00
                                 </div>
 
                                 
@@ -146,35 +146,39 @@
                         </div>
                         <div class="al_index_post_excerpt_cnt">
                             <p class="al_index_post_excerpt">
-                                Promise是JS异步编程中的重要概念，异步抽象处理对象，是目前比较流行Javascript异步编程解决方案之一
+                                ###解构赋值
 
-Promise的使用
+本质： 模式匹配，只要两边的模式相同。左边的变量就会被赋予对应的值
 
-Promise是一个构造函数
-new Promise返回一个promise对象，接收一个函数作为参数，
-callback(resolve, reject)
+ 1. 数组的解构赋值数组的元素是按下标排列的，变量的取值由他的位置所决定
+    
+    
 
 1
 2
-3
-4
-5
 
 
-const promise = new Promise((resolve, reject) => {
-    // 此时的代码依然是同步
-    // 异步处理
-    // 处理后的结果，=> resolve 或者 reject
-});
+let [a, c, d] = [1, 2, 3];
+let [e, [f, [j]]] = [1, [2, [3]]];
 
 
-Promise的状态
-三种状态
+ 2. 不完全解构
+    
+    1
+    2
+    
+    
+    let [o] = []; // undefined
+    let [bar, foo] = [1]; // 1 , undefined
+    
+    
+    
+ 3. 嵌套数组解构
 
                             </p>
                         </div>
                         <div class="al_index_post_button_cnt dis_flex">
-                            <a class="al_button al_button_theme al_index_post_button" href="2019/01/05/1.promise/">
+                            <a class="al_button al_button_theme al_index_post_button" href="2019/07/18/11.解构赋值/">
                                 READ ON
                             </a>
                             <a class="al_button al_button_transparent al_index_post_button" target="_blank" rel="noopener" href="//getpocket.com/edit?url=http://example.com/">
@@ -187,11 +191,6 @@ Promise的状态
 
             <nav class="dis_flex al_post_nav">
                 <a class="al_post_nav_item dis_flex_acenter" href="/">
-                    
-                        <svg class="al_arrow">
-                            <use xmlns="http://www.w3.org/2000/svg" xlink:href="/assets/svg_icons.svg#svg-arrow-left"></use>
-                        </svg>
-                        <span>Newer Posts</span>
                     
                 </a>
                 <a class="al_post_nav_item dis_flex_acenter" href="/">

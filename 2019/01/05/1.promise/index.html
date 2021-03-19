@@ -1,0 +1,274 @@
+
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>不会吧！不会吧！还不知道Promise！！</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=2.0">
+<link rel="stylesheet" href="/css/style.css">
+<link rel="shortcut icon" href="/favicon.ico">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+<link rel="manifest" href="/site.webmanifest">
+
+        
+    
+        <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.css">
+    
+    <link rel='stylesheet' href="/./css/dracula.css">
+
+    <meta name="generator" content="Hexo 5.4.0"></head>
+    <body>
+        <header class="al_header al_pos_fixed">
+    <div class="al_header_container dis_flex_jcenter">
+        <div class="al_header_container_left">
+            <div class="al_header_site_title">
+                <a href="/">Hi~Guys😀！</a>
+            </div>
+        </div>
+
+        <div class="dis_flex_jcenter">
+            <div class="al_header_setting">
+                <svg class="al_header_icon">
+                    <use xmlns="http://www.w3.org/2000/svg" xlink:href="/assets/svg_icons.svg#svg-menu"></use>
+                </svg>
+            </div>
+        </div>
+    </div>
+</header>
+
+        <div class="al_sidebar">
+
+    <div class="al_sidebar_overlay al_full_cover"></div>
+
+    <div class="al_pos_fixed al_sidebar_cnt">
+        <div class="dis_flex_acenter al_sidebar_header">
+            <h3>Hi~Guys😀！</h3>
+            <div class="al_sidebar_close al_header_setting">
+                <svg class="al_header_icon">
+                    <use xmlns="http://www.w3.org/2000/svg" xlink:href="/assets/svg_icons.svg#svg-close"></use>
+                </svg>
+            </div>
+        </div>
+
+        <div class="al_sidebar_author_cnt">
+
+            <div class="al_sidebar_author_info">
+                <h4>今天你挨踢了嘛</h4>
+                <img class="al_sidebar_avatar" src="https://pic4.zhimg.com/v2-f9d311d02adca36a90eef8f69df13093_r.jpg?source=1940ef5c">
+                <p>人理解迭代，神理解递归。</p>
+            </div>
+
+            
+                <div class="al_sidebar_contact_info">
+                    <h4>GET IN TOUCH</h4>
+                    <p>因为热爱,所以挨踢</p>
+
+                    <div class="dis_flex al_sidebar_social_widget">
+                        
+                        
+
+                        
+                        
+                            <div class="al_social_icon_cnt" data_link="https://www.instagram.com/instagram_username">
+                                <svg class="al_social_icon" id="instagram">
+                                    <use xmlns="http://www.w3.org/2000/svg" xlink:href="/assets/svg_icons.svg#icon_instagram"></use>
+                                </svg>
+                            </div>
+                        
+
+                        
+                        
+                            <div class="al_social_icon_cnt" data_link="https://weibo.com/weibo_username/">
+                                <svg class="al_social_icon" id="weibo">
+                                    <use xmlns="http://www.w3.org/2000/svg" xlink:href="/assets/svg_icons.svg#icon_weibo"></use>
+                                </svg>
+                            </div>
+                        
+
+                        
+                        
+                            <div class="al_social_icon_cnt" data_link="https://www.github.com/q1273888910">
+                                <svg class="al_social_icon" id="github">
+                                    <use xmlns="http://www.w3.org/2000/svg" xlink:href="/assets/svg_icons.svg#icon_github"></use>
+                                </svg>
+                            </div>
+                        
+
+                        
+                        
+                    </div>
+                </div>
+            
+        </div>
+    </div>
+</div>
+
+        
+    <div class="dis_flex_center al_lightbox_cnt al_full_cover">
+        <img class="al_lightbox_img"/>
+    </div>
+    <div class="al_page_background dis_flex_center al_full_cover"></div>
+    <div class="al_page_container">
+        <div class="al_pos_ab al_fake_background"></div>
+        <div class="al_main_container al_shadow al_main_page_container">
+            <article class="al_article">
+                <header>
+                    <h1 class="al_page_title">
+                        不会吧！不会吧！还不知道Promise！！
+                    </h1>
+                    <div class="al_page_info dis_flex">
+                        <div class="al_page_content_info">
+                            Sat January 5, 2019 12:00 AM
+                        </div>
+
+                        
+                            <div class="al_page_content_info">
+                                732 words
+                            </div>
+                        
+
+                        
+                            <div class="al_page_content_info">
+                                3 minutes read
+                            </div>
+                        
+                        <span class="tags"></span>
+                    </div>
+                </header>
+
+                
+
+                
+                <section id="post-body">
+                    <p>Promise是JS异步编程中的重要概念，异步抽象处理对象，是目前比较流行Javascript异步编程解决方案之一</p>
+<p>Promise的使用</p>
+<blockquote>
+<p>Promise是一个构造函数<br>    new Promise返回一个promise对象，接收一个函数作为参数，<br>    callback(resolve, reject)</p>
+</blockquote>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><code class="hljs js"><span class="hljs-keyword">const</span> promise = <span class="hljs-keyword">new</span> <span class="hljs-built_in">Promise</span>(<span class="hljs-function">(<span class="hljs-params">resolve, reject</span>) =&gt;</span> &#123;<br>    <span class="hljs-comment">// 此时的代码依然是同步</span><br>    <span class="hljs-comment">// 异步处理</span><br>    <span class="hljs-comment">// 处理后的结果，=&gt; resolve 或者 reject</span><br>&#125;);<br></code></pre></td></tr></table></figure>
+
+<p>Promise的状态<br>三种状态<br>    1. pending 等待<br>    2. fulfilled  完成<br>    3. rejected 失败</p>
+<ol>
+<li>当promise对象初始化状态 =&gt; pending</li>
+<li>当调用resolve(成功)  pending =&gt; fulfilled</li>
+<li>当调用reject(失败)  pending =&gt; rejected<br>注： 状态只能 pending =&gt; fulfilled/rejected ，修改后不能再变</li>
+</ol>
+<p>Promise的方法</p>
+<ol>
+<li><p>then方法: 接收两个参数： 一个成功回调函数，一个失败回调函数</p>
+<blockquote>
+<p>then方法是异步执行</p>
+</blockquote>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs js"><span class="hljs-comment">// onFulfilled 成功回调函数</span><br><span class="hljs-comment">// onRejected  失败回调函数</span><br>promise.then(onFulfilled, onRejected)<br></code></pre></td></tr></table></figure></li>
+<li><p>then中的两个函数<br> resolve(成功) onFulfilled会被调用<br> reject(失败) onRejected会被调用</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><code class="hljs js"><span class="hljs-keyword">const</span> promise = <span class="hljs-keyword">new</span> <span class="hljs-built_in">Promise</span>(<span class="hljs-function">(<span class="hljs-params">resolve, reject</span>) =&gt;</span> &#123;<br>        resolve(<span class="hljs-string">&#x27;success&#x27;</span>); <span class="hljs-comment">// 将pending状态转为 fulfilled</span><br>        <span class="hljs-comment">// reject(&#x27;fail&#x27;); // 将pending状态转为 rejected</span><br>    &#125;);<br><br>    promise.then(<span class="hljs-function">(<span class="hljs-params">res</span>) =&gt;</span> &#123;<br>        <span class="hljs-comment">// 成功 如果成功则不会执行onRejected的函数</span><br>        <span class="hljs-built_in">console</span>.log(res);<br>    &#125;, <span class="hljs-function">(<span class="hljs-params">res</span>) =&gt;</span> &#123;<br>        <span class="hljs-comment">// 失败 如果失败则不会执行onFulfilled的函数</span><br>        <span class="hljs-built_in">console</span>.log(res);<br>    &#125;);<br><br></code></pre></td></tr></table></figure></li>
+<li><p>promise.catch(onRejected)</p>
+<blockquote>
+<p>在链式中捕获reject异常</p>
+</blockquote>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><code class="hljs js">promise.catch(<span class="hljs-function">(<span class="hljs-params">res</span>) =&gt;</span> &#123;<br>    <span class="hljs-built_in">console</span>.log(res);<br>&#125;)<br><br><span class="hljs-comment">// =&gt;</span><br><br>promise.then(<span class="hljs-literal">null</span>, <span class="hljs-function">(<span class="hljs-params">res</span>) =&gt;</span> &#123;<br>    <span class="hljs-built_in">console</span>.log(res);<br>&#125;);<br><br><span class="hljs-comment">// =&gt;</span><br>promise.then(<span class="hljs-function">(<span class="hljs-params">res</span>) =&gt;</span> &#123;<br>    <span class="hljs-comment">// 成功 onFulfilled</span><br>    <span class="hljs-built_in">console</span>.log(res);<br>&#125;).catch(<span class="hljs-function">(<span class="hljs-params">res</span>) =&gt;</span> &#123;<br>    <span class="hljs-comment">// 失败 onRejected</span><br>    <span class="hljs-built_in">console</span>.log(res);<br>&#125;)<br><br><span class="hljs-comment">// 注： onRejected 不能捕获当前onFulfilled中的异常</span><br></code></pre></td></tr></table></figure></li>
+<li><p>promise chain (promise链式)</p>
+<blockquote>
+<p>promise.then方法每次调用 都返回一个新的promise对象 所以可以链式写法</p>
+</blockquote>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><code class="hljs js"><span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">tA</span>(<span class="hljs-params"></span>) </span>&#123;<br>    <span class="hljs-built_in">console</span>.log(<span class="hljs-string">&#x27;A&#x27;</span>);<br>&#125;<br><br><span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">tB</span>(<span class="hljs-params"></span>) </span>&#123;<br>    <span class="hljs-built_in">console</span>.log(<span class="hljs-string">&#x27;B&#x27;</span>);<br>&#125;<br><br><span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">tErr</span>(<span class="hljs-params"></span>) </span>&#123;<br>    <span class="hljs-built_in">console</span>.log(<span class="hljs-string">&#x27;err&#x27;</span>);<br>&#125;<br><br><br><span class="hljs-keyword">let</span> promise = <span class="hljs-built_in">Promise</span>.resolve();<br>promise<br>    .then(tA)<br>    .then(tB)<br>    .catch(tErr)<br></code></pre></td></tr></table></figure></li>
+<li><p>Promise的静态方法</p>
+</li>
+<li><p>1 Promise.resolve返回一个fulfilled状态的promise对象</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><code class="hljs js"><span class="hljs-built_in">Promise</span>.resolve(<span class="hljs-string">&#x27;hello&#x27;</span>).then(<span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">value</span>)</span>&#123;<br>    <span class="hljs-built_in">console</span>.log(value);<br>&#125;);<br><br><span class="hljs-built_in">Promise</span>.resolve(<span class="hljs-string">&#x27;hello&#x27;</span>);<br><span class="hljs-comment">// =&gt;</span><br><span class="hljs-keyword">const</span> promise = <span class="hljs-keyword">new</span> <span class="hljs-built_in">Promise</span>(<span class="hljs-function"><span class="hljs-params">resolve</span> =&gt;</span> &#123;<br>   resolve(<span class="hljs-string">&#x27;hello&#x27;</span>);<br>&#125;);<br></code></pre></td></tr></table></figure></li>
+</ol>
+<p>5.2 Promise.reject返回一个rejected状态</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><code class="hljs js"><span class="hljs-built_in">Promise</span>.reject(<span class="hljs-number">24</span>);<br>=&gt;<br><span class="hljs-keyword">new</span> <span class="hljs-built_in">Promise</span>(<span class="hljs-function">(<span class="hljs-params">resolve, reject</span>) =&gt;</span> &#123;<br>   reject(<span class="hljs-number">24</span>);<br>&#125;);<br></code></pre></td></tr></table></figure>
+
+<p>5.3 Promise.all 接收一个promise对象数组为参数<br>全部为resolve才会调用 通常会用来处理 多个并行异步操作</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><code class="hljs js"><span class="hljs-keyword">const</span> p1 = <span class="hljs-keyword">new</span> <span class="hljs-built_in">Promise</span>(<span class="hljs-function">(<span class="hljs-params">resolve, reject</span>) =&gt;</span> &#123;<br>    resolve(<span class="hljs-number">1</span>);<br>&#125;);<br><span class="hljs-keyword">const</span> p2 = <span class="hljs-keyword">new</span> <span class="hljs-built_in">Promise</span>(<span class="hljs-function">(<span class="hljs-params">resolve, reject</span>) =&gt;</span> &#123;<br>    resolve(<span class="hljs-number">2</span>);<br>&#125;);<br><span class="hljs-keyword">const</span> p3 = <span class="hljs-keyword">new</span> <span class="hljs-built_in">Promise</span>(<span class="hljs-function">(<span class="hljs-params">resolve, reject</span>) =&gt;</span> &#123;<br>    resolve(<span class="hljs-number">3</span>);<br>&#125;);<br><br><span class="hljs-built_in">Promise</span>.all([p1, p2, p3]).then(<span class="hljs-function"><span class="hljs-params">data</span> =&gt;</span> &#123;<br>    <span class="hljs-built_in">console</span>.log(data); <span class="hljs-comment">// [1, 2, 3] 结果顺序和promise实例数组顺序是一致的</span><br>&#125;);<br></code></pre></td></tr></table></figure>
+
+<p>5.4 Promise.race 接收一个promise对象数组为参数, 返回率先改变状态promise的结果</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><code class="hljs js"><span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">timer</span>(<span class="hljs-params">delay</span>) </span>&#123;<br>    <span class="hljs-keyword">return</span> <span class="hljs-keyword">new</span> <span class="hljs-built_in">Promise</span>(<span class="hljs-function">(<span class="hljs-params">resolve, reject</span>) =&gt;</span> &#123;<br>        <span class="hljs-built_in">setTimeout</span>(<span class="hljs-function">() =&gt;</span> &#123;<br>            resolve(delay);<br>        &#125;, delay)<br>    &#125;);<br>&#125;<br><br><span class="hljs-comment">// 时间越短的，越早返回，则认为是率先改变状态的promise实例</span><br><span class="hljs-built_in">Promise</span>.race([timer(<span class="hljs-number">20</span>), timer(<span class="hljs-number">100</span>), timer(<span class="hljs-number">5</span>)]).then(<span class="hljs-function"><span class="hljs-params">data</span> =&gt;</span> &#123;<br>    <span class="hljs-built_in">console</span>.log(data)<br>&#125;, <span class="hljs-function">(<span class="hljs-params">err</span>) =&gt;</span> &#123;<br>    <span class="hljs-built_in">console</span>.log(err);<br>&#125;);<br></code></pre></td></tr></table></figure>
+
+
+
+
+
+
+                </section>
+
+                
+                
+    <div id="al_gitalk_cnt" />
+    <script src="//cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.min.js"></script>
+    <script>
+        var gitalk = new Gitalk({
+            clientID: "xxxxxxx",
+            clientSecret: "github_clientSecret",
+            repo: "you site homepage",
+            owner: "your username",
+            admin: "same as [owner]",
+            id: "不会吧！不会吧！还不知道Promise！！",
+        });
+        gitalk.render("al_gitalk_cnt")
+    </script>
+
+                
+    <div id="disqus_thread" clas="al_disqus">
+    <script>
+        (function(){
+          var dsq = document.createElement('script');
+          dsq.type = 'text/javascript';
+          dsq.async = true;
+          dsq.src = '//your_disqus_short_name.disqus.com/embed.js';
+          (document.head || document.body).appendChild(dsq);
+        }());
+    </script>
+
+
+            </article>
+
+            
+            <nav class="dis_flex al_post_nav">
+                <a class="al_post_nav_item dis_flex_acenter" href="/2019/01/20/2.Interator/">
+                    
+                        <svg class="al_arrow">
+                            <use xmlns="http://www.w3.org/2000/svg" xlink:href="/assets/svg_icons.svg#svg-arrow-left"></use>
+                        </svg>
+                        <span class="al_text_ellipsis al_post_nav_desc">Iterator难道没听过？</span>
+                    
+                </a>
+                <a class="al_post_nav_item dis_flex_acenter" href="/">
+                    
+                </a>
+            </nav>
+        </div>
+    </div>
+
+
+        <div class="al_index_footer dis_flex_center">
+    <div class="al_index_footer_item al_index_footer_title">
+        今天你挨踢了嘛
+    </div>
+
+    
+    
+
+    <div class="al_index_footer_item al_index_footer_extra">
+        Created By 
+        <a target="_blank" rel="noopener" href="https://github.com/iGuan7u/Acetolog">AcetoLog</a>
+         · Power By 
+        <a target="_blank" rel="noopener" href="https://hexo.io/">Hexo</a>
+    </div>
+
+    <div class="al_index_footer_item al_index_footer_extra_right">
+        All Right Reserved
+    </div>
+</div>
+
+        <script type="text/javascript" async="async" src="/javascripts/acelog.js"></script>
+        
+        
+        
+        
+    </body>
+</html>
+        
