@@ -1,0 +1,377 @@
+
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>数组的扩展</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=2.0">
+<link rel="stylesheet" href="/css/style.css">
+<link rel="shortcut icon" href="/favicon.ico">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+<link rel="manifest" href="/site.webmanifest">
+
+        
+    
+        <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.css">
+    
+    <link rel='stylesheet' href="/./css/dracula.css">
+
+    <meta name="generator" content="Hexo 5.4.0"></head>
+    <body>
+        <header class="al_header al_pos_fixed">
+    <div class="al_header_container dis_flex_jcenter">
+        <div class="al_header_container_left">
+            <div class="al_header_site_title">
+                <a href="/">Hi~Guys😀！</a>
+            </div>
+        </div>
+
+        <div class="dis_flex_jcenter">
+            <div class="al_header_setting">
+                <svg class="al_header_icon">
+                    <use xmlns="http://www.w3.org/2000/svg" xlink:href="/assets/svg_icons.svg#svg-menu"></use>
+                </svg>
+            </div>
+        </div>
+    </div>
+</header>
+
+        <div class="al_sidebar">
+
+    <div class="al_sidebar_overlay al_full_cover"></div>
+
+    <div class="al_pos_fixed al_sidebar_cnt">
+        <div class="dis_flex_acenter al_sidebar_header">
+            <h3>Hi~Guys😀！</h3>
+            <div class="al_sidebar_close al_header_setting">
+                <svg class="al_header_icon">
+                    <use xmlns="http://www.w3.org/2000/svg" xlink:href="/assets/svg_icons.svg#svg-close"></use>
+                </svg>
+            </div>
+        </div>
+
+        <div class="al_sidebar_author_cnt">
+
+            <div class="al_sidebar_author_info">
+                <h4>今天你挨踢了嘛</h4>
+                <img class="al_sidebar_avatar" src="https://pic4.zhimg.com/v2-f9d311d02adca36a90eef8f69df13093_r.jpg?source=1940ef5c">
+                <p>人理解迭代，神理解递归。</p>
+            </div>
+
+            
+                <div class="al_sidebar_contact_info">
+                    <h4>GET IN TOUCH</h4>
+                    <p>因为热爱,所以挨踢</p>
+
+                    <div class="dis_flex al_sidebar_social_widget">
+                        
+                        
+
+                        
+                        
+                            <div class="al_social_icon_cnt" data_link="https://www.instagram.com/instagram_username">
+                                <svg class="al_social_icon" id="instagram">
+                                    <use xmlns="http://www.w3.org/2000/svg" xlink:href="/assets/svg_icons.svg#icon_instagram"></use>
+                                </svg>
+                            </div>
+                        
+
+                        
+                        
+                            <div class="al_social_icon_cnt" data_link="https://weibo.com/weibo_username/">
+                                <svg class="al_social_icon" id="weibo">
+                                    <use xmlns="http://www.w3.org/2000/svg" xlink:href="/assets/svg_icons.svg#icon_weibo"></use>
+                                </svg>
+                            </div>
+                        
+
+                        
+                        
+                            <div class="al_social_icon_cnt" data_link="https://www.github.com/q1273888910">
+                                <svg class="al_social_icon" id="github">
+                                    <use xmlns="http://www.w3.org/2000/svg" xlink:href="/assets/svg_icons.svg#icon_github"></use>
+                                </svg>
+                            </div>
+                        
+
+                        
+                        
+                    </div>
+                </div>
+            
+        </div>
+    </div>
+</div>
+
+        
+    <div class="dis_flex_center al_lightbox_cnt al_full_cover">
+        <img class="al_lightbox_img"/>
+    </div>
+    <div class="al_page_background dis_flex_center al_full_cover"></div>
+    <div class="al_page_container">
+        <div class="al_pos_ab al_fake_background"></div>
+        <div class="al_main_container al_shadow al_main_page_container">
+            <article class="al_article">
+                <header>
+                    <h1 class="al_page_title">
+                        数组的扩展
+                    </h1>
+                    <div class="al_page_info dis_flex">
+                        <div class="al_page_content_info">
+                            Fri March 19, 2021 08:22 PM
+                        </div>
+
+                        
+                            <div class="al_page_content_info">
+                                1.9k words
+                            </div>
+                        
+
+                        
+                            <div class="al_page_content_info">
+                                8 minutes read
+                            </div>
+                        
+                        <span class="tags"></span>
+                    </div>
+                </header>
+
+                
+
+                
+                <section id="post-body">
+                    <p>数组的方法</p>
+<ol>
+<li>Array.from()</li>
+</ol>
+<ol>
+<li>扩展运算符<blockquote>
+<p>扩展运算符（spread）是三个点（…）。它好比 rest 参数的逆运算，将一个数组转为用逗号分隔的参数序列</p>
+</blockquote>
+</li>
+</ol>
+<p>扩展运算符的应用</p>
+<ol>
+<li><p>复制数组</p>
+<blockquote>
+<p>数组是复合的数据类型，直接复制的话，只是复制了指向底层数据结构的指针，而不是克隆一个全新的数组</p>
+</blockquote>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><code class="hljs js"><span class="hljs-keyword">const</span> a1 = [<span class="hljs-number">1</span>, <span class="hljs-number">2</span>];<br><span class="hljs-comment">// 写法一</span><br><span class="hljs-keyword">const</span> a2 = [...a1];<br><span class="hljs-comment">// 写法二</span><br><span class="hljs-keyword">const</span> [...a2] = a1;<br></code></pre></td></tr></table></figure></li>
+<li><p>合并数组</p>
+<blockquote>
+<p>这两种方法都是浅拷贝，使用的时候需要注意</p>
+</blockquote>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br></pre></td><td class="code"><pre><code class="hljs js"><span class="hljs-keyword">const</span> arr1 = [<span class="hljs-string">&#x27;a&#x27;</span>, <span class="hljs-string">&#x27;b&#x27;</span>];<br><span class="hljs-keyword">const</span> arr2 = [<span class="hljs-string">&#x27;c&#x27;</span>];<br><span class="hljs-keyword">const</span> arr3 = [<span class="hljs-string">&#x27;d&#x27;</span>, <span class="hljs-string">&#x27;e&#x27;</span>];<br><br><span class="hljs-comment">// ES5 的合并数组</span><br>arr1.concat(arr2, arr3);<br><span class="hljs-comment">// [ &#x27;a&#x27;, &#x27;b&#x27;, &#x27;c&#x27;, &#x27;d&#x27;, &#x27;e&#x27; ]</span><br><br><span class="hljs-comment">// ES6 的合并数组</span><br>[...arr1, ...arr2, ...arr3]<br><span class="hljs-comment">// [ &#x27;a&#x27;, &#x27;b&#x27;, &#x27;c&#x27;, &#x27;d&#x27;, &#x27;e&#x27; ]</span><br><br><span class="hljs-keyword">const</span> a1 = [&#123; <span class="hljs-attr">foo</span>: <span class="hljs-number">1</span> &#125;];<br><span class="hljs-keyword">const</span> a2 = [&#123; <span class="hljs-attr">bar</span>: <span class="hljs-number">2</span> &#125;];<br><br><span class="hljs-keyword">const</span> a3 = a1.concat(a2);<br><span class="hljs-keyword">const</span> a4 = [...a1, ...a2];<br><br><span class="hljs-keyword">let</span> a = &#123;<span class="hljs-attr">a</span>: <span class="hljs-string">&#x27;1&#x27;</span>&#125;;<br><span class="hljs-keyword">let</span> b = &#123;<span class="hljs-attr">b</span>: <span class="hljs-string">&#x27;2&#x27;</span>&#125;;<br><span class="hljs-keyword">const</span> a1 = [a, b];<br><span class="hljs-keyword">const</span> b1 = [...a1]<br><br>a3[<span class="hljs-number">0</span>] === a1[<span class="hljs-number">0</span>] <span class="hljs-comment">// true</span><br>a4[<span class="hljs-number">0</span>] === a1[<span class="hljs-number">0</span>] <span class="hljs-comment">// true</span><br><span class="hljs-comment">// 用两种不同方法合并而成的新数组，但是它们的成员都是对原数组成员的引用，这就是浅拷贝。如果修改了原数组的成员，会同步反映到新数组</span><br></code></pre></td></tr></table></figure></li>
+<li><p>与解构赋值结合</p>
+<blockquote>
+<p>扩展运算符可以与解构赋值结合起来，用于生成数组</p>
+</blockquote>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><code class="hljs js"><span class="hljs-comment">// ES5</span><br>a = list[<span class="hljs-number">0</span>], rest = list.slice(<span class="hljs-number">1</span>)<br><span class="hljs-comment">// ES6</span><br>[a, ...rest] = list<br></code></pre></td></tr></table></figure></li>
+<li><p>扩展运算符可以将字符串转为真正的数组</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs js">[...<span class="hljs-string">&#x27;hello&#x27;</span>]<br><span class="hljs-comment">// [ &quot;h&quot;, &quot;e&quot;, &quot;l&quot;, &quot;l&quot;, &quot;o&quot; ]</span><br></code></pre></td></tr></table></figure></li>
+</ol>
+<p>###数组的方法</p>
+<ol>
+<li>Array.from();</li>
+</ol>
+<blockquote>
+<p>将两类对象转为真正的数组：<br>1.1 类似数组的对象（array-like object）<br>注： 任何有length属性的对象，都可以通过Array.from方法转为数组</p>
+</blockquote>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><code class="hljs js"><span class="hljs-keyword">let</span> arrayLike = &#123;<br>    <span class="hljs-string">&#x27;0&#x27;</span>: <span class="hljs-string">&#x27;a&#x27;</span>,<br>    <span class="hljs-string">&#x27;1&#x27;</span>: <span class="hljs-string">&#x27;b&#x27;</span>,<br>    <span class="hljs-string">&#x27;2&#x27;</span>: <span class="hljs-string">&#x27;c&#x27;</span>,<br>    length: <span class="hljs-number">3</span><br>&#125;;<br><br><span class="hljs-comment">// ES5的写法</span><br><span class="hljs-keyword">var</span> arr1 = [].slice.call(arrayLike); <span class="hljs-comment">// [&#x27;a&#x27;, &#x27;b&#x27;, &#x27;c&#x27;]</span><br><br><span class="hljs-comment">// ES6的写法</span><br><span class="hljs-keyword">let</span> arr2 = <span class="hljs-built_in">Array</span>.from(arrayLike); <span class="hljs-comment">// [&#x27;a&#x27;, &#x27;b&#x27;, &#x27;c&#x27;]</span><br><br><br><span class="hljs-built_in">Array</span>.from(&#123; <span class="hljs-attr">length</span>: <span class="hljs-number">3</span> &#125;);<br><span class="hljs-comment">// [ undefined, undefined, undefined ]</span><br></code></pre></td></tr></table></figure>
+<p>1.2 可遍历（iterable）的对象(包括 ES6 新增的数据结构 Set 和 Map)</p>
+<blockquote>
+<p>部署了 Iterator 接口的数据结构，Array.from都能将其转为数组</p>
+</blockquote>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><code class="hljs js"><span class="hljs-comment">// NodeList对象</span><br><span class="hljs-keyword">let</span> ps = <span class="hljs-built_in">document</span>.querySelectorAll(<span class="hljs-string">&#x27;p&#x27;</span>);<br><span class="hljs-built_in">Array</span>.from(ps).filter(<span class="hljs-function"><span class="hljs-params">p</span> =&gt;</span> &#123;<br>  <span class="hljs-keyword">return</span> p.textContent.length &gt; <span class="hljs-number">100</span>;<br>&#125;);<br><br><span class="hljs-comment">// arguments对象</span><br><span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">foo</span>(<span class="hljs-params"></span>) </span>&#123;<br>  <span class="hljs-keyword">var</span> args = <span class="hljs-built_in">Array</span>.from(<span class="hljs-built_in">arguments</span>);<br>  <span class="hljs-comment">// ...</span><br>&#125;<br></code></pre></td></tr></table></figure>
+
+<ol start="2">
+<li>Array.from()的参数<br>第一个参数： 需要转为数组的对象<br>第二个参数： 过滤器函数<br>第三个参数: 在过滤器函数中的this对象<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><code class="hljs js"><span class="hljs-keyword">var</span> obj = &#123;<br>    <span class="hljs-number">0</span>: <span class="hljs-number">1</span>,<br>    <span class="hljs-number">1</span>: <span class="hljs-number">2</span>,<br>    <span class="hljs-number">2</span>: <span class="hljs-number">3</span>,<br>    length: <span class="hljs-number">3</span><br>&#125;;<br><br><span class="hljs-keyword">let</span> keys = &#123;<br>    a: <span class="hljs-number">1</span><br>&#125;<br><br><span class="hljs-built_in">console</span>.log(<span class="hljs-built_in">Array</span>.from(obj,  <span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params">item</span>) </span>&#123;<br>    <span class="hljs-built_in">console</span>.log(<span class="hljs-built_in">this</span>.a)<br>    <span class="hljs-keyword">return</span> <span class="hljs-built_in">this</span>.a + item<br><br>&#125;, keys))<br></code></pre></td></tr></table></figure></li>
+</ol>
+<ol start="2">
+<li><p>Array.of();</p>
+<blockquote>
+<p>Array.of方法用于将一组值，转换为数组, 弥补数组构造函数Array()的不足<br>总是返回参数值组成的数组。如果没有参数，就返回一个空数组</p>
+</blockquote>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><code class="hljs js"><span class="hljs-built_in">Array</span>.of() <span class="hljs-comment">// []</span><br><span class="hljs-built_in">Array</span>.of(<span class="hljs-literal">undefined</span>) <span class="hljs-comment">// [undefined]</span><br><span class="hljs-built_in">Array</span>.of(<span class="hljs-number">1</span>) <span class="hljs-comment">// [1]</span><br><span class="hljs-built_in">Array</span>.of(<span class="hljs-number">1</span>, <span class="hljs-number">2</span>) <span class="hljs-comment">// [1, 2]</span><br></code></pre></td></tr></table></figure></li>
+<li><p>array.copyWithin(target, start, end)</p>
+<blockquote>
+<p>在当前数组内部，将指定位置的成员复制到其他位置（会覆盖原有成员），然后返回当前数组<br> target（必需）：从该位置开始替换数据。如果为负值，表示倒数。<br> start（可选）：从该位置开始读取数据，默认为 0。如果为负值，表示从末尾开始计算。<br> end（可选）：到该位置前停止读取数据，默认等于数组长度。如果为负值，表示从末尾开始计算</p>
+</blockquote>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs js"><span class="hljs-built_in">console</span>.log([<span class="hljs-number">0</span>, <span class="hljs-number">1</span>, <span class="hljs-number">2</span>, <span class="hljs-number">3</span>, <span class="hljs-number">4</span>, <span class="hljs-number">5</span>, <span class="hljs-number">6</span>, <span class="hljs-number">7</span>, <span class="hljs-number">8</span>].copyWithin(<span class="hljs-number">0</span>, <span class="hljs-number">3</span>)); <span class="hljs-comment">// [ 3, 4, 5, 6, 7, 8, 6, 7, 8 ]</span><br><br><span class="hljs-built_in">console</span>.log([<span class="hljs-number">0</span>, <span class="hljs-number">1</span>, <span class="hljs-number">2</span>, <span class="hljs-number">3</span>, <span class="hljs-number">4</span>, <span class="hljs-number">5</span>, <span class="hljs-number">6</span>, <span class="hljs-number">7</span>, <span class="hljs-number">8</span>].copyWithin(<span class="hljs-number">0</span>, <span class="hljs-number">3</span>, <span class="hljs-number">5</span>)); <span class="hljs-comment">// [ 3, 4, 2, 3, 4, 5, 6, 7, 8 ]</span><br></code></pre></td></tr></table></figure></li>
+<li><p>array.find(callback(item, index, arr))</p>
+<blockquote>
+<p>用于找出第一个符合条件的数组成员<br>所有数组成员依次执行该回调函数，直到找出第一个返回值为true的成员，然后返回该成员<br>没有找到返回undefined<br>参数：<br> 第一个参数：callback</p>
+<pre><code>     item：当前元素
+     index: 当前下标
+     arr: 原数组
+</code></pre>
+<p> 第二个参数：对象</p>
+<pre><code> 回调函数中的this对象指向的对象。
+</code></pre>
+</blockquote>
+</li>
+</ol>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><code class="hljs js"><span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">f</span>(<span class="hljs-params">v</span>)</span>&#123;<br>  <span class="hljs-keyword">return</span> v &gt; <span class="hljs-built_in">this</span>.age;<br>&#125;<br><span class="hljs-keyword">let</span> person = &#123;<span class="hljs-attr">name</span>: <span class="hljs-string">&#x27;John&#x27;</span>, <span class="hljs-attr">age</span>: <span class="hljs-number">20</span>&#125;;<br>[<span class="hljs-number">10</span>, <span class="hljs-number">12</span>, <span class="hljs-number">26</span>, <span class="hljs-number">15</span>].find(f, person);    <span class="hljs-comment">// 26</span><br><br></code></pre></td></tr></table></figure>
+
+<ol start="5">
+<li><p>array.findIndex(callback(item, index, arr));</p>
+<blockquote>
+<p>返回第一个符合条件的数组成员的位置<br>如果所有成员都不符合条件，则返回-1</p>
+</blockquote>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs plain">[1, 5, 10, 15].findIndex(function(value, index, arr) &#123;<br>  return value &gt; 9;<br>&#125;) &#x2F;&#x2F; 2<br></code></pre></td></tr></table></figure></li>
+<li><p>array.fill(val, start, end)</p>
+<blockquote>
+<p>使用给定值，填充一个数组</p>
+<pre><code> val: 填充值
+ start: 开始填充的起始位置
+ end:   填充的 结束的位置
+</code></pre>
+</blockquote>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs plain">[&#39;a&#39;, &#39;b&#39;, &#39;c&#39;].fill(7, 1, 2); &#x2F;&#x2F; [&#39;a&#39;, 7, &#39;c&#39;]<br></code></pre></td></tr></table></figure></li>
+<li><p>array.includes(val, target)</p>
+<blockquote>
+<p>表示某个数组是否包含给定的值<br>参数<br> val: 查询的参数<br> index: 搜索的起始位置 默认为0</p>
+</blockquote>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs plain">[1, 2, 3].includes(3, 3);  &#x2F;&#x2F; false<br>[1, 2, 3].includes(3, -1); &#x2F;&#x2F; true<br></code></pre></td></tr></table></figure></li>
+<li><p>array.keys(); =&gt; 键名的遍历<br>array.values(); =&gt; 键值的遍历<br>array.entries(); =&gt; 键值对的遍历</p>
+</li>
+</ol>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><code class="hljs js"><span class="hljs-keyword">for</span> (<span class="hljs-keyword">let</span> index <span class="hljs-keyword">of</span> [<span class="hljs-string">&#x27;a&#x27;</span>, <span class="hljs-string">&#x27;b&#x27;</span>].keys()) &#123;<br>    <span class="hljs-built_in">console</span>.log(index);<br>&#125;<br><br><span class="hljs-keyword">for</span> (<span class="hljs-keyword">let</span> value <span class="hljs-keyword">of</span> [<span class="hljs-string">&#x27;a&#x27;</span>, <span class="hljs-string">&#x27;b&#x27;</span>].values()) &#123;<br>    <span class="hljs-built_in">console</span>.log(value);<br>&#125;<br><br><span class="hljs-keyword">for</span> (<span class="hljs-keyword">let</span> entry <span class="hljs-keyword">of</span> [<span class="hljs-string">&#x27;a&#x27;</span>, <span class="hljs-string">&#x27;b&#x27;</span>].entries()) &#123;<br>    <span class="hljs-built_in">console</span>.log(entry); <span class="hljs-comment">// [index, value]</span><br>&#125;<br></code></pre></td></tr></table></figure>
+
+<ol start="9">
+<li>扁平化<br>array.flat(扁平层数 = 1); <blockquote>
+<p>扁平层数: Infinity<br>原数组有空位，flat()方法会跳过空位</p>
+</blockquote>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><code class="hljs js"><span class="hljs-built_in">console</span>.log([<span class="hljs-number">1</span>, [<span class="hljs-number">2</span>, <span class="hljs-number">3</span>]].flat()) <span class="hljs-comment">// [1, 2, 3]</span><br><span class="hljs-built_in">console</span>.log([<span class="hljs-number">1</span>, [<span class="hljs-number">2</span>, , <span class="hljs-number">3</span>]].flat()) <span class="hljs-comment">// [1, 2, 3]</span><br><span class="hljs-built_in">console</span>.log([<span class="hljs-number">1</span>, [<span class="hljs-number">2</span>, [<span class="hljs-number">3</span>]]].flat()); <span class="hljs-comment">// [1, 2, [3]]</span><br><span class="hljs-built_in">console</span>.log([<span class="hljs-number">1</span>, [<span class="hljs-number">2</span>, [<span class="hljs-number">3</span>]]].flat(<span class="hljs-number">2</span>)); <span class="hljs-comment">// [1, 2, 3]</span><br></code></pre></td></tr></table></figure>
+array.flatMap()<blockquote>
+<ol>
+<li>对原数组的每个成员执行一个函数，相当于执行Array.prototype.map()</li>
+<li>然后对返回值组成的数组执行flat()方法</li>
+<li>该方法返回一个新数组，不改变原数组</li>
+<li>只能展开一层数组</li>
+</ol>
+</blockquote>
+</li>
+</ol>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><code class="hljs js"><span class="hljs-comment">// 相当于 [[2, 4], [3, 6], [4, 8]].flat()</span><br>[<span class="hljs-number">2</span>, <span class="hljs-number">3</span>, <span class="hljs-number">4</span>].flatMap(<span class="hljs-function">(<span class="hljs-params">x</span>) =&gt;</span> [x, x * <span class="hljs-number">2</span>])<br><span class="hljs-comment">// [2, 4, 3, 6, 4, 8]</span><br><br><br><span class="hljs-comment">// 相当于 [[[2]], [[4]], [[6]], [[8]]].flat()</span><br>[<span class="hljs-number">1</span>, <span class="hljs-number">2</span>, <span class="hljs-number">3</span>, <span class="hljs-number">4</span>].flatMap(<span class="hljs-function"><span class="hljs-params">x</span> =&gt;</span> [[x * <span class="hljs-number">2</span>]])<br><span class="hljs-comment">// [[2], [4], [6], [8]]</span><br></code></pre></td></tr></table></figure>
+
+
+<ol start="10">
+<li>数组空位</li>
+</ol>
+<blockquote>
+<p>forEach(), filter(), reduce(), every() 和some()都会跳过空位<br>map()会跳过空位，但会保留这个值<br>join()和toString()会将空位视为undefined，而undefined和null会被处理成空字符串</p>
+</blockquote>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><code class="hljs js"><span class="hljs-comment">// forEach方法</span><br>[,<span class="hljs-string">&#x27;a&#x27;</span>].forEach(<span class="hljs-function">(<span class="hljs-params">x,i</span>) =&gt;</span> <span class="hljs-built_in">console</span>.log(i)); <span class="hljs-comment">// 1</span><br><br><span class="hljs-comment">// filter方法</span><br>[<span class="hljs-string">&#x27;a&#x27;</span>,,<span class="hljs-string">&#x27;b&#x27;</span>].filter(<span class="hljs-function"><span class="hljs-params">x</span> =&gt;</span> <span class="hljs-literal">true</span>) <span class="hljs-comment">// [&#x27;a&#x27;,&#x27;b&#x27;]</span><br><br><span class="hljs-comment">// every方法</span><br>[,<span class="hljs-string">&#x27;a&#x27;</span>].every(<span class="hljs-function"><span class="hljs-params">x</span> =&gt;</span> x===<span class="hljs-string">&#x27;a&#x27;</span>) <span class="hljs-comment">// true</span><br><br><span class="hljs-comment">// reduce方法</span><br>[<span class="hljs-number">1</span>,,<span class="hljs-number">2</span>].reduce(<span class="hljs-function">(<span class="hljs-params">x,y</span>) =&gt;</span> x+y) <span class="hljs-comment">// 3</span><br><br><span class="hljs-comment">// some方法</span><br>[,<span class="hljs-string">&#x27;a&#x27;</span>].some(<span class="hljs-function"><span class="hljs-params">x</span> =&gt;</span> x !== <span class="hljs-string">&#x27;a&#x27;</span>) <span class="hljs-comment">// false</span><br><br><span class="hljs-comment">// map方法</span><br>[,<span class="hljs-string">&#x27;a&#x27;</span>].map(<span class="hljs-function"><span class="hljs-params">x</span> =&gt;</span> <span class="hljs-number">1</span>) <span class="hljs-comment">// [,1]</span><br><br><span class="hljs-comment">// join方法</span><br>[,<span class="hljs-string">&#x27;a&#x27;</span>,<span class="hljs-literal">undefined</span>,<span class="hljs-literal">null</span>].join(<span class="hljs-string">&#x27;#&#x27;</span>) <span class="hljs-comment">// &quot;#a##&quot;</span><br><br><span class="hljs-comment">// toString方法</span><br>[,<span class="hljs-string">&#x27;a&#x27;</span>,<span class="hljs-literal">undefined</span>,<span class="hljs-literal">null</span>].toString() <span class="hljs-comment">// &quot;,a,,&quot;</span><br></code></pre></td></tr></table></figure>
+<blockquote>
+<p>ES6 则是明确将空位转为undefined<br>Array.from方法会将数组的空位，转为undefined</p>
+</blockquote>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs js"><span class="hljs-built_in">Array</span>.from([<span class="hljs-string">&#x27;a&#x27;</span>,,<span class="hljs-string">&#x27;b&#x27;</span>])<br><span class="hljs-comment">// [ &quot;a&quot;, undefined, &quot;b&quot; ]</span><br></code></pre></td></tr></table></figure>
+<blockquote>
+<p>扩展运算符（…）也会将空位转为undefined</p>
+</blockquote>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs js">[...[<span class="hljs-string">&#x27;a&#x27;</span>,,<span class="hljs-string">&#x27;b&#x27;</span>]]<br><span class="hljs-comment">// [ &quot;a&quot;, undefined, &quot;b&quot; ]</span><br></code></pre></td></tr></table></figure>
+<blockquote>
+<p>copyWithin()会连空位一起拷贝</p>
+</blockquote>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs js">[,<span class="hljs-string">&#x27;a&#x27;</span>,<span class="hljs-string">&#x27;b&#x27;</span>,,].copyWithin(<span class="hljs-number">2</span>,<span class="hljs-number">0</span>) <span class="hljs-comment">// [,&quot;a&quot;,,&quot;a&quot;]</span><br></code></pre></td></tr></table></figure>
+<blockquote>
+<p>fill()会将空位视为正常的数组位置</p>
+</blockquote>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs js"><span class="hljs-keyword">new</span> <span class="hljs-built_in">Array</span>(<span class="hljs-number">3</span>).fill(<span class="hljs-string">&#x27;a&#x27;</span>) <span class="hljs-comment">// [&quot;a&quot;,&quot;a&quot;,&quot;a&quot;]</span><br></code></pre></td></tr></table></figure>
+<blockquote>
+<p>for…of循环也会遍历空位</p>
+</blockquote>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><code class="hljs js"><span class="hljs-keyword">let</span> arr = [, ,];<br><span class="hljs-keyword">for</span> (<span class="hljs-keyword">let</span> i <span class="hljs-keyword">of</span> arr) &#123;<br>  <span class="hljs-built_in">console</span>.log(<span class="hljs-number">1</span>);<br>&#125;<br><span class="hljs-comment">// 1</span><br><span class="hljs-comment">// 1</span><br></code></pre></td></tr></table></figure>
+<blockquote>
+<p>entries()、keys()、values()、find()和findIndex()会将空位处理成undefined</p>
+</blockquote>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><code class="hljs js"><span class="hljs-comment">// entries()</span><br>[...[,<span class="hljs-string">&#x27;a&#x27;</span>].entries()] <span class="hljs-comment">// [[0,undefined], [1,&quot;a&quot;]]</span><br><br><span class="hljs-comment">// keys()</span><br>[...[,<span class="hljs-string">&#x27;a&#x27;</span>].keys()] <span class="hljs-comment">// [0,1]</span><br><br><span class="hljs-comment">// values()</span><br>[...[,<span class="hljs-string">&#x27;a&#x27;</span>].values()] <span class="hljs-comment">// [undefined,&quot;a&quot;]</span><br><br><span class="hljs-comment">// find()</span><br>[,<span class="hljs-string">&#x27;a&#x27;</span>].find(<span class="hljs-function"><span class="hljs-params">x</span> =&gt;</span> <span class="hljs-literal">true</span>) <span class="hljs-comment">// undefined</span><br><br><span class="hljs-comment">// findIndex()</span><br>[,<span class="hljs-string">&#x27;a&#x27;</span>].findIndex(<span class="hljs-function"><span class="hljs-params">x</span> =&gt;</span> <span class="hljs-literal">true</span>) <span class="hljs-comment">// 0</span><br></code></pre></td></tr></table></figure>
+
+
+                </section>
+
+                
+                
+    <div id="al_gitalk_cnt" />
+    <script src="//cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.min.js"></script>
+    <script>
+        var gitalk = new Gitalk({
+            clientID: "xxxxxxx",
+            clientSecret: "github_clientSecret",
+            repo: "you site homepage",
+            owner: "your username",
+            admin: "same as [owner]",
+            id: "数组的扩展",
+        });
+        gitalk.render("al_gitalk_cnt")
+    </script>
+
+                
+    <div id="disqus_thread" clas="al_disqus">
+    <script>
+        (function(){
+          var dsq = document.createElement('script');
+          dsq.type = 'text/javascript';
+          dsq.async = true;
+          dsq.src = '//your_disqus_short_name.disqus.com/embed.js';
+          (document.head || document.body).appendChild(dsq);
+        }());
+    </script>
+
+
+            </article>
+
+            
+            <nav class="dis_flex al_post_nav">
+                <a class="al_post_nav_item dis_flex_acenter" href="/2021/03/19/7.%E5%AF%B9%E8%B1%A1%E4%B8%8A%E7%9A%84%E6%89%A9%E5%B1%95%E6%96%B9%E6%B3%95/">
+                    
+                        <svg class="al_arrow">
+                            <use xmlns="http://www.w3.org/2000/svg" xlink:href="/assets/svg_icons.svg#svg-arrow-left"></use>
+                        </svg>
+                        <span class="al_text_ellipsis al_post_nav_desc">对象上的扩展方法</span>
+                    
+                </a>
+                <a class="al_post_nav_item dis_flex_acenter" href="/2021/03/19/5.generator/">
+                    
+                        <span class="al_text_ellipsis al_post_nav_desc">Generator - 异步编程解决方法之一</span>
+                        <svg class="al_arrow">
+                            <use xmlns="http://www.w3.org/2000/svg" xlink:href="/assets/svg_icons.svg#svg-arrow-right"></use>
+                        </svg>
+                    
+                </a>
+            </nav>
+        </div>
+    </div>
+
+
+        <div class="al_index_footer dis_flex_center">
+    <div class="al_index_footer_item al_index_footer_title">
+        今天你挨踢了嘛
+    </div>
+
+    
+    
+
+    <div class="al_index_footer_item al_index_footer_extra">
+        Created By 
+        <a target="_blank" rel="noopener" href="https://github.com/iGuan7u/Acetolog">AcetoLog</a>
+         · Power By 
+        <a target="_blank" rel="noopener" href="https://hexo.io/">Hexo</a>
+    </div>
+
+    <div class="al_index_footer_item al_index_footer_extra_right">
+        All Right Reserved
+    </div>
+</div>
+
+        <script type="text/javascript" async="async" src="/javascripts/acelog.js"></script>
+        
+        
+        
+        
+    </body>
+</html>
+        

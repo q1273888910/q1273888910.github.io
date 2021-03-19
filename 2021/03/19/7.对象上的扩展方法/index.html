@@ -1,0 +1,327 @@
+
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>对象上的扩展方法</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=2.0">
+<link rel="stylesheet" href="/css/style.css">
+<link rel="shortcut icon" href="/favicon.ico">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+<link rel="manifest" href="/site.webmanifest">
+
+        
+    
+        <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.css">
+    
+    <link rel='stylesheet' href="/./css/dracula.css">
+
+    <meta name="generator" content="Hexo 5.4.0"></head>
+    <body>
+        <header class="al_header al_pos_fixed">
+    <div class="al_header_container dis_flex_jcenter">
+        <div class="al_header_container_left">
+            <div class="al_header_site_title">
+                <a href="/">Hi~Guys😀！</a>
+            </div>
+        </div>
+
+        <div class="dis_flex_jcenter">
+            <div class="al_header_setting">
+                <svg class="al_header_icon">
+                    <use xmlns="http://www.w3.org/2000/svg" xlink:href="/assets/svg_icons.svg#svg-menu"></use>
+                </svg>
+            </div>
+        </div>
+    </div>
+</header>
+
+        <div class="al_sidebar">
+
+    <div class="al_sidebar_overlay al_full_cover"></div>
+
+    <div class="al_pos_fixed al_sidebar_cnt">
+        <div class="dis_flex_acenter al_sidebar_header">
+            <h3>Hi~Guys😀！</h3>
+            <div class="al_sidebar_close al_header_setting">
+                <svg class="al_header_icon">
+                    <use xmlns="http://www.w3.org/2000/svg" xlink:href="/assets/svg_icons.svg#svg-close"></use>
+                </svg>
+            </div>
+        </div>
+
+        <div class="al_sidebar_author_cnt">
+
+            <div class="al_sidebar_author_info">
+                <h4>今天你挨踢了嘛</h4>
+                <img class="al_sidebar_avatar" src="https://pic4.zhimg.com/v2-f9d311d02adca36a90eef8f69df13093_r.jpg?source=1940ef5c">
+                <p>人理解迭代，神理解递归。</p>
+            </div>
+
+            
+                <div class="al_sidebar_contact_info">
+                    <h4>GET IN TOUCH</h4>
+                    <p>因为热爱,所以挨踢</p>
+
+                    <div class="dis_flex al_sidebar_social_widget">
+                        
+                        
+
+                        
+                        
+                            <div class="al_social_icon_cnt" data_link="https://www.instagram.com/instagram_username">
+                                <svg class="al_social_icon" id="instagram">
+                                    <use xmlns="http://www.w3.org/2000/svg" xlink:href="/assets/svg_icons.svg#icon_instagram"></use>
+                                </svg>
+                            </div>
+                        
+
+                        
+                        
+                            <div class="al_social_icon_cnt" data_link="https://weibo.com/weibo_username/">
+                                <svg class="al_social_icon" id="weibo">
+                                    <use xmlns="http://www.w3.org/2000/svg" xlink:href="/assets/svg_icons.svg#icon_weibo"></use>
+                                </svg>
+                            </div>
+                        
+
+                        
+                        
+                            <div class="al_social_icon_cnt" data_link="https://www.github.com/q1273888910">
+                                <svg class="al_social_icon" id="github">
+                                    <use xmlns="http://www.w3.org/2000/svg" xlink:href="/assets/svg_icons.svg#icon_github"></use>
+                                </svg>
+                            </div>
+                        
+
+                        
+                        
+                    </div>
+                </div>
+            
+        </div>
+    </div>
+</div>
+
+        
+    <div class="dis_flex_center al_lightbox_cnt al_full_cover">
+        <img class="al_lightbox_img"/>
+    </div>
+    <div class="al_page_background dis_flex_center al_full_cover"></div>
+    <div class="al_page_container">
+        <div class="al_pos_ab al_fake_background"></div>
+        <div class="al_main_container al_shadow al_main_page_container">
+            <article class="al_article">
+                <header>
+                    <h1 class="al_page_title">
+                        对象上的扩展方法
+                    </h1>
+                    <div class="al_page_info dis_flex">
+                        <div class="al_page_content_info">
+                            Fri March 19, 2021 08:22 PM
+                        </div>
+
+                        
+                            <div class="al_page_content_info">
+                                1.3k words
+                            </div>
+                        
+
+                        
+                            <div class="al_page_content_info">
+                                6 minutes read
+                            </div>
+                        
+                        <span class="tags"></span>
+                    </div>
+                </header>
+
+                
+
+                
+                <section id="post-body">
+                    <p>###1. Object.is(a, b);</p>
+<blockquote>
+<p>同值相等 比较两个值是否严格相等，与严格比较运算符（===）的行为基本一致<br>不同之处只有两个：一是+0不等于-0，二是NaN等于自身</p>
+</blockquote>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs js"><span class="hljs-built_in">Object</span>.is(+<span class="hljs-number">0</span>, -<span class="hljs-number">0</span>) <span class="hljs-comment">// false</span><br><span class="hljs-built_in">Object</span>.is(<span class="hljs-literal">NaN</span>, <span class="hljs-literal">NaN</span>) <span class="hljs-comment">// true</span><br></code></pre></td></tr></table></figure>
+
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><code class="hljs js"><span class="hljs-built_in">Object</span>.defineProperty(<span class="hljs-built_in">Object</span>, <span class="hljs-string">&#x27;is&#x27;</span>, &#123;<br>  value: <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">x, y</span>) </span>&#123;<br>    <span class="hljs-keyword">if</span> (x === y) &#123;<br>      <span class="hljs-comment">// 针对+0 不等于 -0的情况</span><br>      <span class="hljs-keyword">return</span> x !== <span class="hljs-number">0</span> || <span class="hljs-number">1</span> / x === <span class="hljs-number">1</span> / y;<br>    &#125;<br>    <span class="hljs-comment">// 针对NaN的情况</span><br>    <span class="hljs-keyword">return</span> x !== x &amp;&amp; y !== y;<br>  &#125;,<br>  configurable: <span class="hljs-literal">true</span>,<br>  enumerable: <span class="hljs-literal">false</span>,<br>  writable: <span class="hljs-literal">true</span><br>&#125;);<br></code></pre></td></tr></table></figure>
+<p>###2. Object.assign()</p>
+<blockquote>
+<p>Object.assign方法用于对象的合并，将源对象（source）的所有可枚举属性，复制到目标对象（target）<br>Object.assign方法的第一个参数是目标对象，后面的参数都是源对象<br>注意，如果目标对象与源对象有同名属性，或多个源对象有同名属性，则后面的属性会覆盖前面的属性</p>
+</blockquote>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><code class="hljs js"><span class="hljs-keyword">const</span> target = &#123; <span class="hljs-attr">a</span>: <span class="hljs-number">1</span>, <span class="hljs-attr">b</span>: <span class="hljs-number">1</span> &#125;;<br><br><span class="hljs-keyword">const</span> source1 = &#123; <span class="hljs-attr">b</span>: <span class="hljs-number">2</span>, <span class="hljs-attr">c</span>: <span class="hljs-number">2</span> &#125;;<br><span class="hljs-keyword">const</span> source2 = &#123; <span class="hljs-attr">c</span>: <span class="hljs-number">3</span> &#125;;<br><br><span class="hljs-built_in">Object</span>.assign(target, source1, source2);<br>target <span class="hljs-comment">// &#123;a:1, b:2, c:3&#125;</span><br></code></pre></td></tr></table></figure>
+<p>注意点</p>
+<ol>
+<li><p>浅拷贝</p>
+</li>
+<li><p>同名属性的替换</p>
+</li>
+<li><p>数组的处理</p>
+</li>
+<li><p>取值函数的处理</p>
+<blockquote>
+<p>Object.assign只能进行值的复制，如果要复制的值是一个取值函数，那么将求值后再复制 </p>
+</blockquote>
+</li>
+<li><p>Object.assign方法总是拷贝一个属性的值，而不会拷贝它背后的赋值方法或取值方法  </p>
+ <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><code class="hljs plain">const source &#x3D; &#123;<br>    get foo() &#123; return 1 &#125;<br>&#125;;<br>const target &#x3D; &#123;&#125;;<br><br>Object.assign(target, source)<br>&#x2F;&#x2F; &#123; foo: 1 &#125;<br></code></pre></td></tr></table></figure></li>
+</ol>
+<p>使用场景</p>
+<ol>
+<li><p>为对象添加属性</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><code class="hljs plain">class Point &#123;<br>  constructor(x, y) &#123;<br>    Object.assign(this, &#123;x, y&#125;);<br>  &#125;<br>&#125;<br></code></pre></td></tr></table></figure></li>
+<li><p>为对象添加方法</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><code class="hljs plain">Object.assign(SomeClass.prototype, &#123;<br>  someMethod(arg1, arg2) &#123;<br>    ···<br>  &#125;,<br>  anotherMethod() &#123;<br>    ···<br>  &#125;<br>&#125;);<br><br>&#x2F;&#x2F; 等同于下面的写法<br>SomeClass.prototype.someMethod &#x3D; function (arg1, arg2) &#123;<br>  ···<br>&#125;;<br>SomeClass.prototype.anotherMethod &#x3D; function () &#123;<br>  ···<br>&#125;;<br></code></pre></td></tr></table></figure></li>
+<li><p>克隆对象</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs plain">function clone(origin) &#123;<br>  return Object.assign(&#123;&#125;, origin);<br>&#125;<br></code></pre></td></tr></table></figure></li>
+<li><p>合并对象</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs plain">const merge &#x3D;<br>  (target, ...sources) &#x3D;&gt; Object.assign(target, ...sources);<br></code></pre></td></tr></table></figure></li>
+<li><p>为属性指定默认值</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><code class="hljs plain">const DEFAULTS &#x3D; &#123;<br>  logLevel: 0,<br>  outputFormat: &#39;html&#39;<br>&#125;;<br><br>function processContent(options) &#123;<br>  options &#x3D; Object.assign(&#123;&#125;, DEFAULTS, options);<br>  console.log(options);<br>  &#x2F;&#x2F; ...<br>&#125;<br></code></pre></td></tr></table></figure></li>
+</ol>
+<p>###3. Object.getOwnPropertyDescriptors()</p>
+<blockquote>
+<p>ES5 的Object.getOwnPropertyDescriptor()方法会返回某个对象属性的描述对象</p>
+</blockquote>
+<blockquote>
+<p>ES2017 引入了Object.getOwnPropertyDescriptors()方法，返回指定对象所有自身属性（非继承属性）的描述对象</p>
+</blockquote>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><code class="hljs js"><span class="hljs-keyword">const</span> obj = &#123;<br>  foo: <span class="hljs-number">123</span>,<br>  <span class="hljs-keyword">get</span> <span class="hljs-title">bar</span>() &#123; <span class="hljs-keyword">return</span> <span class="hljs-string">&#x27;abc&#x27;</span> &#125;<br>&#125;;<br><br><span class="hljs-built_in">Object</span>.getOwnPropertyDescriptors(obj)<br><span class="hljs-comment">// &#123; foo:</span><br><span class="hljs-comment">//    &#123; value: 123,</span><br><span class="hljs-comment">//      writable: true,</span><br><span class="hljs-comment">//      enumerable: true,</span><br><span class="hljs-comment">//      configurable: true &#125;,</span><br><span class="hljs-comment">//   bar:</span><br><span class="hljs-comment">//    &#123; get: [Function: get bar],</span><br><span class="hljs-comment">//      set: undefined,</span><br><span class="hljs-comment">//      enumerable: true,</span><br><span class="hljs-comment">//      configurable: true &#125; &#125;</span><br></code></pre></td></tr></table></figure>
+
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br></pre></td><td class="code"><pre><code class="hljs js"><span class="hljs-comment">// Object.assign方法总是拷贝一个属性的值，而不会拷贝它背后的赋值方法或取值方法</span><br><span class="hljs-keyword">const</span> source = &#123;<br>  <span class="hljs-keyword">set</span> <span class="hljs-title">foo</span>(<span class="hljs-params">value</span>) &#123;<br>    <span class="hljs-built_in">console</span>.log(value);<br>  &#125;<br>&#125;;<br><br><span class="hljs-keyword">const</span> target1 = &#123;&#125;;<br><span class="hljs-built_in">Object</span>.assign(target1, source);<br><br><span class="hljs-built_in">Object</span>.getOwnPropertyDescriptor(target1, <span class="hljs-string">&#x27;foo&#x27;</span>)<br><span class="hljs-comment">// &#123; value: undefined,</span><br><span class="hljs-comment">//   writable: true,</span><br><span class="hljs-comment">//   enumerable: true,</span><br><span class="hljs-comment">//   configurable: true &#125;</span><br><br><br><br><span class="hljs-comment">// Object.getOwnPropertyDescriptors()方法配合Object.defineProperties()方法，就可以实现正确拷贝</span><br><br><span class="hljs-keyword">const</span> source = &#123;<br>  <span class="hljs-keyword">set</span> <span class="hljs-title">foo</span>(<span class="hljs-params">value</span>) &#123;<br>    <span class="hljs-built_in">console</span>.log(value);<br>  &#125;<br>&#125;;<br><br><span class="hljs-keyword">const</span> target2 = &#123;&#125;;<br><span class="hljs-built_in">Object</span>.defineProperties(target2, <span class="hljs-built_in">Object</span>.getOwnPropertyDescriptors(source));<br><span class="hljs-built_in">Object</span>.getOwnPropertyDescriptor(target2, <span class="hljs-string">&#x27;foo&#x27;</span>)<br><span class="hljs-comment">// &#123; get: undefined,</span><br><span class="hljs-comment">//   set: [Function: set foo],</span><br><span class="hljs-comment">//   enumerable: true,</span><br><span class="hljs-comment">//   configurable: true &#125;</span><br></code></pre></td></tr></table></figure>
+
+
+<p>###4. __proto__属性，Object.setPrototypeOf()，Object.getPrototypeOf()</p>
+<p>__proto__属性</p>
+<blockquote>
+<p>__proto__属性（前后各两个下划线），用来读取或设置当前对象的prototype对象。目前，所有浏览器（包括 IE11）都部署了这个属性</p>
+</blockquote>
+<p>Object.setPrototypeOf() </p>
+<blockquote>
+<p>Object.setPrototypeOf方法的作用与__proto__相同，用来设置一个对象的prototype对象，返回参数对象本身。<br>它是 ES6 正式推荐的设置原型对象的方法</p>
+</blockquote>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><code class="hljs js"><span class="hljs-keyword">let</span> proto = &#123;&#125;;<br><span class="hljs-keyword">let</span> obj = &#123; <span class="hljs-attr">x</span>: <span class="hljs-number">10</span> &#125;;<br><span class="hljs-built_in">Object</span>.setPrototypeOf(obj, proto);<br><br>proto.y = <span class="hljs-number">20</span>;<br>proto.z = <span class="hljs-number">40</span>;<br><br>obj.x <span class="hljs-comment">// 10</span><br>obj.y <span class="hljs-comment">// 20</span><br>obj.z <span class="hljs-comment">// 40</span><br></code></pre></td></tr></table></figure>
+
+<p>Object.getPrototypeOf()</p>
+<blockquote>
+<p>该方法与Object.setPrototypeOf方法配套，用于读取一个对象的原型对象</p>
+</blockquote>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs plain">Object.getPrototypeOf(obj);<br></code></pre></td></tr></table></figure>
+
+
+<p>###4. Object.keys()</p>
+<blockquote>
+<p>ES5 引入了Object.keys方法，返回一个数组，成员是参数对象自身的（不含继承的）所有可遍历（enumerable）属性的键名</p>
+</blockquote>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs plain">var obj &#x3D; &#123; foo: &#39;bar&#39;, baz: 42 &#125;;<br>Object.keys(obj)<br>&#x2F;&#x2F; [&quot;foo&quot;, &quot;baz&quot;]<br></code></pre></td></tr></table></figure>
+
+
+<p>Object.values()</p>
+<blockquote>
+<p>Object.values方法返回一个数组，成员是参数对象自身的（不含继承的）所有可遍历（enumerable）属性的键值</p>
+</blockquote>
+<p>Object.entries()</p>
+<blockquote>
+<p>Object.entries()方法返回一个数组，成员是参数对象自身的（不含继承的）所有可遍历（enumerable）属性的键值对数组</p>
+</blockquote>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><code class="hljs js"><span class="hljs-keyword">let</span> &#123;keys, values, entries&#125; = <span class="hljs-built_in">Object</span>;<br><span class="hljs-keyword">let</span> obj = &#123; <span class="hljs-attr">a</span>: <span class="hljs-number">1</span>, <span class="hljs-attr">b</span>: <span class="hljs-number">2</span>, <span class="hljs-attr">c</span>: <span class="hljs-number">3</span> &#125;;<br><br><span class="hljs-keyword">for</span> (<span class="hljs-keyword">let</span> key <span class="hljs-keyword">of</span> keys(obj)) &#123;<br>  <span class="hljs-built_in">console</span>.log(key); <span class="hljs-comment">// &#x27;a&#x27;, &#x27;b&#x27;, &#x27;c&#x27;</span><br>&#125;<br><br><span class="hljs-keyword">for</span> (<span class="hljs-keyword">let</span> value <span class="hljs-keyword">of</span> values(obj)) &#123;<br>  <span class="hljs-built_in">console</span>.log(value); <span class="hljs-comment">// 1, 2, 3</span><br>&#125;<br><br><span class="hljs-keyword">for</span> (<span class="hljs-keyword">let</span> [key, value] <span class="hljs-keyword">of</span> entries(obj)) &#123;<br>  <span class="hljs-built_in">console</span>.log([key, value]); <span class="hljs-comment">// [&#x27;a&#x27;, 1], [&#x27;b&#x27;, 2], [&#x27;c&#x27;, 3]</span><br>&#125;<br></code></pre></td></tr></table></figure>
+
+
+<p>Object.fromEntries()</p>
+<blockquote>
+<p>Object.fromEntries()方法是Object.entries()的逆操作，用于将一个键值对数组转为对象</p>
+</blockquote>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><code class="hljs plain">Object.fromEntries([<br>  [&#39;foo&#39;, &#39;bar&#39;],<br>  [&#39;baz&#39;, 42]<br>])<br>&#x2F;&#x2F; &#123; foo: &quot;bar&quot;, baz: 42 &#125;<br></code></pre></td></tr></table></figure>
+
+<blockquote>
+<p>该方法的主要目的，是将键值对的数据结构还原为对象，因此特别适合将 Map 结构转为对象</p>
+</blockquote>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><code class="hljs plain">&#x2F;&#x2F; 例一<br>const entries &#x3D; new Map([<br>  [&#39;foo&#39;, &#39;bar&#39;],<br>  [&#39;baz&#39;, 42]<br>]);<br><br>Object.fromEntries(entries)<br>&#x2F;&#x2F; &#123; foo: &quot;bar&quot;, baz: 42 &#125;<br><br>&#x2F;&#x2F; 例二<br>const map &#x3D; new Map().set(&#39;foo&#39;, true).set(&#39;bar&#39;, false);<br>Object.fromEntries(map)<br>&#x2F;&#x2F; &#123; foo: true, bar: false &#125;<br></code></pre></td></tr></table></figure>
+                </section>
+
+                
+                
+    <div id="al_gitalk_cnt" />
+    <script src="//cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.min.js"></script>
+    <script>
+        var gitalk = new Gitalk({
+            clientID: "xxxxxxx",
+            clientSecret: "github_clientSecret",
+            repo: "you site homepage",
+            owner: "your username",
+            admin: "same as [owner]",
+            id: "对象上的扩展方法",
+        });
+        gitalk.render("al_gitalk_cnt")
+    </script>
+
+                
+    <div id="disqus_thread" clas="al_disqus">
+    <script>
+        (function(){
+          var dsq = document.createElement('script');
+          dsq.type = 'text/javascript';
+          dsq.async = true;
+          dsq.src = '//your_disqus_short_name.disqus.com/embed.js';
+          (document.head || document.body).appendChild(dsq);
+        }());
+    </script>
+
+
+            </article>
+
+            
+            <nav class="dis_flex al_post_nav">
+                <a class="al_post_nav_item dis_flex_acenter" href="/2021/03/19/3.Reflect/">
+                    
+                        <svg class="al_arrow">
+                            <use xmlns="http://www.w3.org/2000/svg" xlink:href="/assets/svg_icons.svg#svg-arrow-left"></use>
+                        </svg>
+                        <span class="al_text_ellipsis al_post_nav_desc">Reflect？</span>
+                    
+                </a>
+                <a class="al_post_nav_item dis_flex_acenter" href="/2021/03/19/10.%E6%95%B0%E7%BB%84%E7%9A%84%E6%89%A9%E5%B1%95/">
+                    
+                        <span class="al_text_ellipsis al_post_nav_desc">数组的扩展</span>
+                        <svg class="al_arrow">
+                            <use xmlns="http://www.w3.org/2000/svg" xlink:href="/assets/svg_icons.svg#svg-arrow-right"></use>
+                        </svg>
+                    
+                </a>
+            </nav>
+        </div>
+    </div>
+
+
+        <div class="al_index_footer dis_flex_center">
+    <div class="al_index_footer_item al_index_footer_title">
+        今天你挨踢了嘛
+    </div>
+
+    
+    
+
+    <div class="al_index_footer_item al_index_footer_extra">
+        Created By 
+        <a target="_blank" rel="noopener" href="https://github.com/iGuan7u/Acetolog">AcetoLog</a>
+         · Power By 
+        <a target="_blank" rel="noopener" href="https://hexo.io/">Hexo</a>
+    </div>
+
+    <div class="al_index_footer_item al_index_footer_extra_right">
+        All Right Reserved
+    </div>
+</div>
+
+        <script type="text/javascript" async="async" src="/javascripts/acelog.js"></script>
+        
+        
+        
+        
+    </body>
+</html>
+        

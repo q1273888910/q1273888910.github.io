@@ -1,0 +1,273 @@
+
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>ES6新class写法可以让对象原型和写法更加清晰</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=2.0">
+<link rel="stylesheet" href="/css/style.css">
+<link rel="shortcut icon" href="/favicon.ico">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+<link rel="manifest" href="/site.webmanifest">
+
+        
+    
+        <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.css">
+    
+    <link rel='stylesheet' href="/./css/dracula.css">
+
+    <meta name="generator" content="Hexo 5.4.0"></head>
+    <body>
+        <header class="al_header al_pos_fixed">
+    <div class="al_header_container dis_flex_jcenter">
+        <div class="al_header_container_left">
+            <div class="al_header_site_title">
+                <a href="/">Hi~Guys😀！</a>
+            </div>
+        </div>
+
+        <div class="dis_flex_jcenter">
+            <div class="al_header_setting">
+                <svg class="al_header_icon">
+                    <use xmlns="http://www.w3.org/2000/svg" xlink:href="/assets/svg_icons.svg#svg-menu"></use>
+                </svg>
+            </div>
+        </div>
+    </div>
+</header>
+
+        <div class="al_sidebar">
+
+    <div class="al_sidebar_overlay al_full_cover"></div>
+
+    <div class="al_pos_fixed al_sidebar_cnt">
+        <div class="dis_flex_acenter al_sidebar_header">
+            <h3>Hi~Guys😀！</h3>
+            <div class="al_sidebar_close al_header_setting">
+                <svg class="al_header_icon">
+                    <use xmlns="http://www.w3.org/2000/svg" xlink:href="/assets/svg_icons.svg#svg-close"></use>
+                </svg>
+            </div>
+        </div>
+
+        <div class="al_sidebar_author_cnt">
+
+            <div class="al_sidebar_author_info">
+                <h4>今天你挨踢了嘛</h4>
+                <img class="al_sidebar_avatar" src="https://pic4.zhimg.com/v2-f9d311d02adca36a90eef8f69df13093_r.jpg?source=1940ef5c">
+                <p>人理解迭代，神理解递归。</p>
+            </div>
+
+            
+                <div class="al_sidebar_contact_info">
+                    <h4>GET IN TOUCH</h4>
+                    <p>因为热爱,所以挨踢</p>
+
+                    <div class="dis_flex al_sidebar_social_widget">
+                        
+                        
+
+                        
+                        
+                            <div class="al_social_icon_cnt" data_link="https://www.instagram.com/instagram_username">
+                                <svg class="al_social_icon" id="instagram">
+                                    <use xmlns="http://www.w3.org/2000/svg" xlink:href="/assets/svg_icons.svg#icon_instagram"></use>
+                                </svg>
+                            </div>
+                        
+
+                        
+                        
+                            <div class="al_social_icon_cnt" data_link="https://weibo.com/weibo_username/">
+                                <svg class="al_social_icon" id="weibo">
+                                    <use xmlns="http://www.w3.org/2000/svg" xlink:href="/assets/svg_icons.svg#icon_weibo"></use>
+                                </svg>
+                            </div>
+                        
+
+                        
+                        
+                            <div class="al_social_icon_cnt" data_link="https://www.github.com/q1273888910">
+                                <svg class="al_social_icon" id="github">
+                                    <use xmlns="http://www.w3.org/2000/svg" xlink:href="/assets/svg_icons.svg#icon_github"></use>
+                                </svg>
+                            </div>
+                        
+
+                        
+                        
+                    </div>
+                </div>
+            
+        </div>
+    </div>
+</div>
+
+        
+    <div class="dis_flex_center al_lightbox_cnt al_full_cover">
+        <img class="al_lightbox_img"/>
+    </div>
+    <div class="al_page_background dis_flex_center al_full_cover"></div>
+    <div class="al_page_container">
+        <div class="al_pos_ab al_fake_background"></div>
+        <div class="al_main_container al_shadow al_main_page_container">
+            <article class="al_article">
+                <header>
+                    <h1 class="al_page_title">
+                        ES6新class写法可以让对象原型和写法更加清晰
+                    </h1>
+                    <div class="al_page_info dis_flex">
+                        <div class="al_page_content_info">
+                            Fri March 19, 2021 08:22 PM
+                        </div>
+
+                        
+                            <div class="al_page_content_info">
+                                969 words
+                            </div>
+                        
+
+                        
+                            <div class="al_page_content_info">
+                                4 minutes read
+                            </div>
+                        
+                        <span class="tags"></span>
+                    </div>
+                </header>
+
+                
+
+                
+                <section id="post-body">
+                    <p>ES6提供了更接近传统语言的写法，引入calss类的概念，作为对象的模板<br>通过class关键字，可以定义类</p>
+<p>新的class写法可以让对象原型和写法更加清晰，更像面向对象编程的语法</p>
+<p>类必须使用new调用，否则会报错。这是它跟普通构造函数的一个主要区别，后者不用new也可以执行</p>
+<p>类不存在变量提升</p>
+<p>定义一个类</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br></pre></td><td class="code"><pre><code class="hljs js"><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Point</span> </span>&#123;<br>    <span class="hljs-comment">// 这里就是我们的构造函数</span><br>    <span class="hljs-function"><span class="hljs-title">constructor</span>(<span class="hljs-params"></span>)</span> &#123;<br><br>        <span class="hljs-comment">// this则指向的是实例</span><br>        <span class="hljs-built_in">this</span>.x = x;<br>        <span class="hljs-built_in">this</span>.y = y;<br>    &#125;<br>&#125;<br><br><span class="hljs-comment">// 可以看出来 其实是构造函数的另一种写法</span><br><span class="hljs-comment">// 类的数据类型就是函数，类本身就指向构造函数</span><br><span class="hljs-keyword">typeof</span> Point <span class="hljs-comment">// &quot;function&quot;</span><br>Point === Point.prototype.constructor <span class="hljs-comment">// true</span><br><br><br><span class="hljs-comment">// 使用的时候也是通过new命令，与构造函数是一致的</span><br><span class="hljs-keyword">let</span> point = <span class="hljs-keyword">new</span> Point(<span class="hljs-number">1</span>, <span class="hljs-number">2</span>);<br><br><br><span class="hljs-comment">// 构造函数中的prototype属性，在ES6的类上面依然存在</span><br><span class="hljs-comment">// 类的所有方法都定义在类的prototype属性上面</span><br><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Person</span> </span>&#123;<br>    <span class="hljs-function"><span class="hljs-title">constructor</span>(<span class="hljs-params"></span>)</span> &#123;<br><br>    &#125;<br><br>    <span class="hljs-function"><span class="hljs-title">toValue</span>(<span class="hljs-params"></span>)</span> &#123;<br><br>    &#125;<br>&#125;<br></code></pre></td></tr></table></figure>
+
+<p>constructor方法<br>constructor是类的默认方法，通过new命令生成对象实例，自动调用该方法，一个类必须有constructor方法，如果没有显示的定义，也会自动创建一个空的constructor</p>
+<p>constructor方法默认返回实例对象，完全可以指定返回另一个对象</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><code class="hljs js"><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Foo</span> </span>&#123;<br>  <span class="hljs-function"><span class="hljs-title">constructor</span>(<span class="hljs-params"></span>)</span> &#123;<br>    <span class="hljs-keyword">return</span> <span class="hljs-built_in">Object</span>.create(<span class="hljs-literal">null</span>);<br>  &#125;<br>&#125;<br><br><span class="hljs-keyword">new</span> Foo() <span class="hljs-keyword">instanceof</span> Foo<br><span class="hljs-comment">// false</span><br></code></pre></td></tr></table></figure>
+
+<p>存值函数与取值函数</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><code class="hljs js"><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">MyClass</span> </span>&#123;<br>  <span class="hljs-function"><span class="hljs-title">constructor</span>(<span class="hljs-params"></span>)</span> &#123;<br>    <span class="hljs-comment">// ...</span><br>  &#125;<br>  <span class="hljs-keyword">get</span> <span class="hljs-title">prop</span>() &#123;<br>    <span class="hljs-keyword">return</span> <span class="hljs-string">&#x27;getter&#x27;</span>;<br>  &#125;<br>  <span class="hljs-keyword">set</span> <span class="hljs-title">prop</span>(<span class="hljs-params">value</span>) &#123;<br>    <span class="hljs-built_in">console</span>.log(<span class="hljs-string">&#x27;setter: &#x27;</span>+value);<br>  &#125;<br>&#125;<br><br><span class="hljs-keyword">let</span> inst = <span class="hljs-keyword">new</span> MyClass();<br><br>inst.prop = <span class="hljs-number">123</span>;<br><span class="hljs-comment">// setter: 123</span><br><br>inst.prop<br><span class="hljs-comment">// &#x27;getter&#x27;</span><br></code></pre></td></tr></table></figure>
+
+<p>this指向问题</p>
+<p>类中解构出来的方法会因为this指向报错</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br></pre></td><td class="code"><pre><code class="hljs js"><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Logger</span> </span>&#123;<br>  <span class="hljs-function"><span class="hljs-title">printName</span>(<span class="hljs-params">name = <span class="hljs-string">&#x27;there&#x27;</span></span>)</span> &#123;<br>    <span class="hljs-built_in">this</span>.print(<span class="hljs-string">`Hello <span class="hljs-subst">$&#123;name&#125;</span>`</span>);<br>  &#125;<br><br>  <span class="hljs-function"><span class="hljs-title">print</span>(<span class="hljs-params">text</span>)</span> &#123;<br>    <span class="hljs-built_in">console</span>.log(text);<br>  &#125;<br>&#125;<br><br><span class="hljs-keyword">const</span> logger = <span class="hljs-keyword">new</span> Logger();<br><span class="hljs-keyword">const</span> &#123; printName &#125; = logger;<br>printName(); <span class="hljs-comment">// TypeError: Cannot read property &#x27;print&#x27; of undefined</span><br><br><br><br><span class="hljs-comment">// 解决方法 使用bind</span><br><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Logger</span> </span>&#123;<br>  <span class="hljs-function"><span class="hljs-title">constructor</span>(<span class="hljs-params"></span>)</span> &#123;<br>    <span class="hljs-built_in">this</span>.printName = <span class="hljs-built_in">this</span>.printName.bind(<span class="hljs-built_in">this</span>);<br>  &#125;<br><br>  <span class="hljs-comment">// ...</span><br>&#125;<br><br><span class="hljs-comment">// 解决方法，使用箭头函数</span><br><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Obj</span> </span>&#123;<br>  <span class="hljs-function"><span class="hljs-title">constructor</span>(<span class="hljs-params"></span>)</span> &#123;<br>    <span class="hljs-built_in">this</span>.getThis = <span class="hljs-function">() =&gt;</span> <span class="hljs-built_in">this</span>;<br>  &#125;<br>&#125;<br><br><span class="hljs-keyword">const</span> myObj = <span class="hljs-keyword">new</span> Obj();<br>myObj.getThis() === myObj <span class="hljs-comment">// true</span><br><br></code></pre></td></tr></table></figure>
+
+
+<p>静态方法<br>直接通过类来调用，而不会被实例继承的方法，称之为静态方法<br>静态方法包含this关键字，这个this指的是类，而不是实例<br>静态方法可以与非静态方法重名</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><code class="hljs js"><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Foo</span> </span>&#123;<br>  <span class="hljs-keyword">static</span> <span class="hljs-function"><span class="hljs-title">classMethod</span>(<span class="hljs-params"></span>)</span> &#123;<br>    <span class="hljs-keyword">return</span> <span class="hljs-string">&#x27;hello&#x27;</span>;<br>  &#125;<br>&#125;<br><br>Foo.classMethod() <span class="hljs-comment">// &#x27;hello&#x27;</span><br><br><span class="hljs-keyword">var</span> foo = <span class="hljs-keyword">new</span> Foo();<br>foo.classMethod()<br><span class="hljs-comment">// TypeError: foo.classMethod is not a function</span><br></code></pre></td></tr></table></figure>
+
+
+<p>静态方法，可以被子类继承</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><code class="hljs js"><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Foo</span> </span>&#123;<br>  <span class="hljs-keyword">static</span> <span class="hljs-function"><span class="hljs-title">classMethod</span>(<span class="hljs-params"></span>)</span> &#123;<br>    <span class="hljs-keyword">return</span> <span class="hljs-string">&#x27;hello&#x27;</span>;<br>  &#125;<br>&#125;<br><br><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Bar</span> <span class="hljs-keyword">extends</span> <span class="hljs-title">Foo</span> </span>&#123;<br>&#125;<br><br>Bar.classMethod() <span class="hljs-comment">// &#x27;hello&#x27;</span><br></code></pre></td></tr></table></figure>
+
+<p>静态方法也是可以从super对象上调用的</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><code class="hljs js"><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Foo</span> </span>&#123;<br>  <span class="hljs-keyword">static</span> <span class="hljs-function"><span class="hljs-title">classMethod</span>(<span class="hljs-params"></span>)</span> &#123;<br>    <span class="hljs-keyword">return</span> <span class="hljs-string">&#x27;hello&#x27;</span>;<br>  &#125;<br>&#125;<br><br><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Bar</span> <span class="hljs-keyword">extends</span> <span class="hljs-title">Foo</span> </span>&#123;<br>  <span class="hljs-keyword">static</span> <span class="hljs-function"><span class="hljs-title">classMethod</span>(<span class="hljs-params"></span>)</span> &#123;<br>    <span class="hljs-keyword">return</span> <span class="hljs-built_in">super</span>.classMethod() + <span class="hljs-string">&#x27;, too&#x27;</span>;<br>  &#125;<br>&#125;<br><br>Bar.classMethod() <span class="hljs-comment">// &quot;hello, too&quot;</span><br></code></pre></td></tr></table></figure>
+
+
+
+<p>静态属性<br>静态属性指的是 Class 本身的属性，即Class.propName，而不是定义在实例对象（this）上的属性</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><code class="hljs js"><br><span class="hljs-comment">// 老写法</span><br><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Foo</span> </span>&#123;<br>&#125;<br><br>Foo.prop = <span class="hljs-number">1</span>;<br>Foo.prop <span class="hljs-comment">// 1</span><br><br><span class="hljs-comment">// 新写法</span><br><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">MyClass</span> </span>&#123;<br>  <span class="hljs-keyword">static</span> myStaticProp = <span class="hljs-number">42</span>;<br><br>  <span class="hljs-function"><span class="hljs-title">constructor</span>(<span class="hljs-params"></span>)</span> &#123;<br>    <span class="hljs-built_in">console</span>.log(MyClass.myStaticProp); <span class="hljs-comment">// 42</span><br>  &#125;<br>&#125;<br><br></code></pre></td></tr></table></figure>
+
+
+
+<p>calss的继承<br>Class 可以通过extends关键字实现继承，这比 ES5 的通过修改原型链实现继承，要清晰和方便很多</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><code class="hljs js"><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Point</span> </span>&#123;<br>&#125;<br><br><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">ColorPoint</span> <span class="hljs-keyword">extends</span> <span class="hljs-title">Point</span> </span>&#123;<br>&#125;<br></code></pre></td></tr></table></figure>
+
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><code class="hljs js"><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">ColorPoint</span> <span class="hljs-keyword">extends</span> <span class="hljs-title">Point</span> </span>&#123;<br>  <span class="hljs-function"><span class="hljs-title">constructor</span>(<span class="hljs-params">x, y, color</span>)</span> &#123;<br>    <span class="hljs-built_in">super</span>(x, y); <span class="hljs-comment">// 调用父类的constructor(x, y)</span><br>    <span class="hljs-built_in">this</span>.color = color;<br>  &#125;<br><br>  <span class="hljs-function"><span class="hljs-title">toString</span>(<span class="hljs-params"></span>)</span> &#123;<br>    <span class="hljs-keyword">return</span> <span class="hljs-built_in">this</span>.color + <span class="hljs-string">&#x27; &#x27;</span> + <span class="hljs-built_in">super</span>.toString(); <span class="hljs-comment">// 调用父类的toString()</span><br>  &#125;<br>&#125;<br></code></pre></td></tr></table></figure>
+
+<blockquote>
+<p>在子类的构造函数中，只有调用super之后，才可以使用this关键字，否则会报错。这是因为子类实例的构建，基于父类实例，只有super方法才能调用父类实例</p>
+</blockquote>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><code class="hljs js"><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Point</span> </span>&#123;<br>  <span class="hljs-function"><span class="hljs-title">constructor</span>(<span class="hljs-params">x, y</span>)</span> &#123;<br>    <span class="hljs-built_in">this</span>.x = x;<br>    <span class="hljs-built_in">this</span>.y = y;<br>  &#125;<br>&#125;<br><br><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">ColorPoint</span> <span class="hljs-keyword">extends</span> <span class="hljs-title">Point</span> </span>&#123;<br>  <span class="hljs-function"><span class="hljs-title">constructor</span>(<span class="hljs-params">x, y, color</span>)</span> &#123;<br>    <span class="hljs-built_in">this</span>.color = color; <span class="hljs-comment">// ReferenceError</span><br>    <span class="hljs-built_in">super</span>(x, y);<br>    <span class="hljs-built_in">this</span>.color = color; <span class="hljs-comment">// 正确</span><br>  &#125;<br>&#125;<br></code></pre></td></tr></table></figure>
+                </section>
+
+                
+                
+    <div id="al_gitalk_cnt" />
+    <script src="//cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.min.js"></script>
+    <script>
+        var gitalk = new Gitalk({
+            clientID: "xxxxxxx",
+            clientSecret: "github_clientSecret",
+            repo: "you site homepage",
+            owner: "your username",
+            admin: "same as [owner]",
+            id: "ES6新class写法可以让对象原型和写法更加清晰",
+        });
+        gitalk.render("al_gitalk_cnt")
+    </script>
+
+                
+    <div id="disqus_thread" clas="al_disqus">
+    <script>
+        (function(){
+          var dsq = document.createElement('script');
+          dsq.type = 'text/javascript';
+          dsq.async = true;
+          dsq.src = '//your_disqus_short_name.disqus.com/embed.js';
+          (document.head || document.body).appendChild(dsq);
+        }());
+    </script>
+
+
+            </article>
+
+            
+            <nav class="dis_flex al_post_nav">
+                <a class="al_post_nav_item dis_flex_acenter" href="/2021/03/19/11.%E8%A7%A3%E6%9E%84%E8%B5%8B%E5%80%BC/">
+                    
+                        <svg class="al_arrow">
+                            <use xmlns="http://www.w3.org/2000/svg" xlink:href="/assets/svg_icons.svg#svg-arrow-left"></use>
+                        </svg>
+                        <span class="al_text_ellipsis al_post_nav_desc">一分钟了解解构赋值</span>
+                    
+                </a>
+                <a class="al_post_nav_item dis_flex_acenter" href="/2021/03/19/2.Interator/">
+                    
+                        <span class="al_text_ellipsis al_post_nav_desc">Iterator难道没听过？</span>
+                        <svg class="al_arrow">
+                            <use xmlns="http://www.w3.org/2000/svg" xlink:href="/assets/svg_icons.svg#svg-arrow-right"></use>
+                        </svg>
+                    
+                </a>
+            </nav>
+        </div>
+    </div>
+
+
+        <div class="al_index_footer dis_flex_center">
+    <div class="al_index_footer_item al_index_footer_title">
+        今天你挨踢了嘛
+    </div>
+
+    
+    
+
+    <div class="al_index_footer_item al_index_footer_extra">
+        Created By 
+        <a target="_blank" rel="noopener" href="https://github.com/iGuan7u/Acetolog">AcetoLog</a>
+         · Power By 
+        <a target="_blank" rel="noopener" href="https://hexo.io/">Hexo</a>
+    </div>
+
+    <div class="al_index_footer_item al_index_footer_extra_right">
+        All Right Reserved
+    </div>
+</div>
+
+        <script type="text/javascript" async="async" src="/javascripts/acelog.js"></script>
+        
+        
+        
+        
+    </body>
+</html>
+        
